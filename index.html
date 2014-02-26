@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="cooKeyApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>cooKey</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body ng-controller="rootController">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header" style="float:left; width:100%;">
+                <form class="navbar-form navbar-right" role="search" style="float:right; margin: 0 -15px;">
+                    <div class="form-group form-inline inline-group">
+                        <input type="text" class="holo" placeholder="Search" ng-model="recipeName" style="width:150px; float:left;">
+                        
+                    </div>
+
+                </form>
+                <a class="navbar-brand" href="#">cooKey</a>
+            </div>
+            <div class="">
+               
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+    
+
+    <div ng-view></div>
+
+
+
+    <div id="footer" class="footer">
+        <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+            <div class="row" id="bottomNav">
+                <div class="col-xs-1 text-center"></div>
+                <div class="col-xs-2 text-center" ng-class="{'active':getClass('/recipe')}">
+                    <a href="#">
+                        <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                        Recipe
+                    </a>
+                </div>
+                <div class="col-xs-2 text-center" ng-class="{'active':getClass('/diy')}">
+                    <a href="#/diy">
+                        <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                        DIY
+                    </a>
+                </div>
+                <div class="col-xs-2 text-center" ng-class="{'active':getClass('/care')}">
+                    <a href="#/care">
+                        <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                        Care
+                    </a>
+                </div>
+                <div class="col-xs-2 text-center" ng-class="{'active':getClass('/promotion')}">
+                    <a href="#/promotion">
+                        <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                        Save
+                    </a>
+                </div>
+                <div class="col-xs-2 text-center" ng-class="{'active':getClass('/ingredient')}">
+                    <a href="#/ingredient">
+                        <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                        Ingre
+                    </a>
+                </div>
+                <div class="col-xs-1 text-center"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controller/controller.js"></script>
+    <script src="services/services.js"></script>
+
+
+</body>
+</html>
