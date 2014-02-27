@@ -18,6 +18,11 @@ app.config(function ($routeProvider) {
                 controller: 'diyController',
                 templateUrl: 'views/diy.html'
             })
+        .when('/diy/result',
+            {
+                controller: 'diyResultController',
+                templateUrl: 'views/diyResult.html'
+            })
         .when('/care',
             {
                 controller: 'careController',

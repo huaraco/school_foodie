@@ -1,1 +1,42 @@
-﻿DIY
+﻿<!--list categories-->
+<div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px; background: rgba(0,0,0,0.7)">
+    <div class="row text-center" id="bottomNav">
+
+        <div class="col-xs-3" ng-repeat="cat in categories" style="padding:10px; margin:0px;" ng-class="{'active':cat.id == selectedCategoryId}">
+            <a id="a{{cat.id}}" ng-click="showCategory(cat.id)">{{cat.name}}</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!--display ingredients of each category-->
+<div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
+    <div class="row">
+        <div class="col-xs-3" ng-repeat="ingre in showIngredients(cat.id)">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ingre.name}}
+                </div>
+                <div class="panel-body">
+                    <img src="img/{{ingre.img}}" class="thumbnail" ng-click="addIngredient(ingre)" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--list selected ingredients-->
+<div class="well well-small" style="position:absolute; bottom:10px; width:100%;">
+    <div class="col-xs-10">
+        <ul class="nav nav-pills">
+            <li class="active" ng-repeat="ingre in diyIngredients" ng-click="removeIngredient(ingre)">
+                <a>{{ingre.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-2 text-right">
+        <a href="#/diy/result" class="btn btn-primary">Go</a>
+    </div>
+</div>
+

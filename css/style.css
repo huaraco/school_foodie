@@ -36,6 +36,10 @@ body {
     padding: 0px 0px;
 }
 
+    #bottomNav .active {
+        background: #ff8533;
+    }
+
     #bottomNav div {
         padding: 10px 0px;
     }
@@ -65,15 +69,15 @@ col-xs-1, col-xs-2, col-xs-3, col-xs-4, col-xs-5, col-xs-6, col-xs-7, col-xs-8, 
 
 
 .thumbnail {
-  display: block;
-  padding: 4px;
-  margin-bottom: 0px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+    display: block;
+    padding: 4px;
+    margin-bottom: 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .panel {
@@ -96,7 +100,8 @@ input.holo[type='text'] {
     background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
     background-size: 1px 6px, 1px 1px, 1px 6px;
 }
-input.holo[type='text']:hover, input.holo[type='text']:focus {
-    background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat, bottom center linear-gradient(#0099cc, #0099cc) repeat-x, bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
-    background-size: 1px 6px, 1px 1px, 1px 6px; 
-} 
+
+    input.holo[type='text']:hover, input.holo[type='text']:focus {
+        background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat, bottom center linear-gradient(#0099cc, #0099cc) repeat-x, bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
+        background-size: 1px 6px, 1px 1px, 1px 6px;
+    }
