@@ -147,7 +147,7 @@ app.service('cooKeyService', function () {
             {
                 sequence: 1,
                 name: 'prepare',
-                description: 'clean your dishes',
+                description: 'clean your dishes <a href="#/recipe/1">chili crab</a>',
                 img: '',
             },
             {
@@ -195,5 +195,22 @@ app.service('cooKeyService', function () {
             }
         ]
     }
+    ];
+
+    var articles = [
+    {
+        id: 1,
+        name: 'dsdfasdf',
+        content: 'adfasdfasdfasfd',
+        img: '',
+        author: ''
+    },
+    {
+        id: 2,
+        name: 'dsdfasdf',
+        content: 'adfasdfasdfasfd <a href="#/recipe/1">chili crab</a>',
+        img: '',
+        author: ''
+    },
     ];
 });

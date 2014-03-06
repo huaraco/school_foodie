@@ -28,6 +28,11 @@ app.config(function ($routeProvider) {
                 controller: 'careController',
                 templateUrl: 'views/care.html'
             })
+        .when('/careDetail/:careId',
+            {
+                controller: 'careDetailController',
+                templateUrl: 'views/careDetail.html'
+            })
         .when('/promotion',
             {
                 controller: 'promotionController',
