@@ -1,4 +1,4 @@
-app.service('cooKeyService', function () {
+app.service('cooKeyService', function ($firebase) {
     var root = this;
 
     this.getRecipes = function () {
@@ -17,6 +17,16 @@ app.service('cooKeyService', function () {
     this.getIngredientsOfCateogry = function(categoryId) {
         return _.where(ingredients, { categoryId: categoryId });
     };
+
+    this.getPromotions = function(){
+        var storeRef = new Firebase("https://is306cookey.firebaseio.com/Store");
+        return $firebase(storeRef);
+    }
+
+    this.getStore = function(stroeId){
+        var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/"+stroeId+"/promotion");
+        return $firebase(promotionRef);
+    }
 
     var categories = [
         {

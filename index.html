@@ -16,7 +16,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 </head>
-<h1>CooKey</h1>
 <body ng-controller="rootController">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -80,18 +79,31 @@
         </div>
     </div>
 
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.js"></script>
+
+    <!-- AngularFire Plugin -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.0/angularfire.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/underscore.min.js"></script>
+
 
     <script src="app.js"></script>
     <script src="controller/controller.js"></script>
     <script src="services/services.js"></script>
 
-
+    <!-- Spinner -->
+    <script src="js/spin.min.js"></script>
+    <script>
+        var target = document.getElementById("spinner");
+        var spinner = new Spinner().spin(target);
+    </script>
 </body>
 </html>

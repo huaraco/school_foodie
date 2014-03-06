@@ -1,1 +1,26 @@
-﻿Promotion
+﻿<div class="container">
+    <div class="navbar-header" style="width:100%">
+        <form class="navbar-form navbar-left" role="search" style="margin-top:-20px;margin-bottom:10px;">
+                    <div class="form-group form-inline inline-group">
+                        <input type="text" class="holo" placeholder="Postal Code" style="width:50%; float:left; margin-left:20px;" />
+                        <button type="button" class="btn btn-default btn-lg" style="margin-left: 15px;">
+                            <span class="glyphicon glyphicon-search" style="float:right;"/>
+                        </button>
+                        <button type="button" class="btn btn-default btn-lg" style="margin-left: 15px;">
+                            <span class="glyphicon glyphicon-map-marker" style="float:right;"/>
+                        </button>
+                    </div>
+        </form>
+    </div>
+    <div ng-repeat="store in stores | orderBy:'ID'">
+        <div class="col-12">
+            <div class="panel panel-default">
+                    <div class="row">
+                            <a href="#/promotion/{{store.ID}}" class="thumbnail" style="width:90%;margin:auto;">
+                                <img src="img/{{store.img}}" style=""> </img>
+                            </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

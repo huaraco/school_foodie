@@ -1,4 +1,4 @@
-var app = angular.module('cooKeyApp', ['ngRoute']);
+var app = angular.module('cooKeyApp', ['ngRoute','firebase']);
 
 //This configures the routes and associates each route with a view and a controller
 app.config(function ($routeProvider) {
@@ -37,6 +37,11 @@ app.config(function ($routeProvider) {
             {
                 controller: 'promotionController',
                 templateUrl: 'views/promotion.html'
+            })
+        .when('/promotion/:storeId',
+            {
+                controller: 'promotionListController',
+                templateUrl: 'views/promotionList.html'
             })
         .when('/ingredient',
             {

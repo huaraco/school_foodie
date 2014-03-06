@@ -81,8 +81,18 @@ app.controller('careController', function ($scope, cooKeyService) {
 
 });
 
-app.controller('promotionController', function ($scope, cooKeyService) {
+app.controller('promotionController', function ($scope, $firebase, cooKeyService) {
+    $scope.stores = cooKeyService.getPromotions();
+});
 
+app.controller('promotionListController', function ($scope, $routeParams, cooKeyService,$firebase) {
+    init();
+    function init() {
+        var storeId = ($routeParams.storeId) ? parseInt($routeParams.storeId) : 0;
+        if (storeId > 0) {
+            $scope.promotions = cooKeyService.getStore(storeId);// $firebase(promotionRef);
+        }
+    }
 });
 
 app.controller('ingredientController', function ($scope, cooKeyService) {
