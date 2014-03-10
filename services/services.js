@@ -5,6 +5,13 @@ app.service('cooKeyService', function ($firebase) {
         return recipes;
     };
 
+    this.getArticles = function () {
+        return articles;
+    };
+    this.getFeaturedArticles = function () {
+        return featuredArticles;
+    }
+
     this.getRecipe = function (id) {
         return _.findWhere(recipes, { id: id })
     };
@@ -210,17 +217,109 @@ app.service('cooKeyService', function ($firebase) {
     var articles = [
     {
         id: 1,
-        name: 'dsdfasdf',
+        name: 'Peanut butter helps diagnose Alzheimers disease',
         content: 'adfasdfasdfasfd',
-        img: '',
-        author: ''
+        img: 'care_peanutButter.jpg',
+        author: 'Belinda Weber',
+        copyright: 'Medical News Today',
+        date: '12/10/2013'
     },
     {
         id: 2,
-        name: 'dsdfasdf',
-        content: 'adfasdfasdfasfd <a href="#/recipe/1">chili crab</a>',
-        img: '',
-        author: ''
+        name: 'How Safe Is Splenda (Sucralose)?',
+        content: 'How Safe Is Splenda (Sucralose)?',
+        img: 'care_splenda.jpg',
+        author: 'Christian Nordqvist',
+        copyright: 'Medical News Today',
+        date: '25/06/2013'
     },
+     {
+         id: 3,
+         name: 'Hot chocolate may prevent memory decline',
+         content: 'How Safe Is Splenda (Sucralose)?',
+         img: 'care_chocolate.jpg',
+         author: 'Dr.Catharine Paddock',
+         copyright: 'Medical News Today',
+         date: '08/08/2013'
+     },
+      {
+          id: 4,
+          name: 'Quinoa nutritional benefits',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_quinoa.jpg',
+          author: 'Yanjun',
+          copyright: 'Medical News Today',
+          date: '09/08/2013'
+      },
+      {
+          id: 5,
+          name: 'Five healthy snacks you can enjoy without guilt',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_snack.jpg',
+          author: 'Sandeep Godiyal',
+          copyright: 'Medical News Today',
+          date: '11/07/2013'
+      },
+      {
+          id: 6,
+          name: 'New science confirms raw milk is remarkably safe',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_milk.jpg',
+          author: 'Ethan A. Huff',
+          copyright: 'Medical News Today',
+          date: '02/07/2013'
+      },
+      {
+          id: 7,
+          name: 'Eight foods that help fight allergies',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_8food.jpg',
+          author: 'Sandeep Godiyal',
+          copyright: 'Medical News Today',
+          date: '01/07/2013'
+      },
     ];
+
+    var featuredArticles = [
+   {
+       id: 1,
+       name: 'Peanut butter helps diagnose Alzheimers disease',
+       content: 'adfasdfasdfasfd',
+       img: 'care_peanutButter.jpg',
+       author: 'Belinda Weber',
+       copyright: 'Medical News Today',
+       date: '12/10/2013'
+   },
+   
+    {
+        id: 2,
+        name: 'Hot chocolate may prevent memory decline',
+        content: 'How Safe Is Splenda (Sucralose)?',
+        img: 'care_chocolate.jpg',
+        author: 'Dr.Catharine Paddock',
+        copyright: 'Medical News Today',
+        date: '08/08/2013'
+    },
+     
+     {
+         id: 3,
+         name: 'Five healthy snacks you can enjoy without guilt',
+         content: 'How Safe Is Splenda (Sucralose)?',
+         img: 'care_snack.jpg',
+         author: 'Sandeep Godiyal',
+         copyright: 'Medical News Today',
+         date: '11/07/2013'
+     },
+    
+     {
+         id: 4,
+         name: 'Eight foods that help fight allergies',
+         content: 'How Safe Is Splenda (Sucralose)?',
+         img: 'care_8food.jpg',
+         author: 'Sandeep Godiyal',
+         copyright: 'Medical News Today',
+         date: '01/07/2013'
+     },
+    ];
+
 });

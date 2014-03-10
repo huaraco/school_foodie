@@ -78,6 +78,11 @@ app.controller('diyResultController', function ($scope, cooKeyService) {
 });
 
 app.controller('careController', function ($scope, cooKeyService) {
+    $scope.articles = cooKeyService.getArticles();
+    $scope.featuredArticles = cooKeyService.getFeaturedArticles();
+});
+
+app.controller('careDetailController', function ($scope, cooKeyService) {
 
 });
 
