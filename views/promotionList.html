@@ -1,4 +1,5 @@
-﻿<div class="container">
+﻿<<<<<<< .mine
+<div class="container">
 	<div ng-repeat="promotion in promotions | orderBy:'name'">
         <div class="col-12">
             <div class="panel panel-default">
@@ -34,3 +35,41 @@
         </div>
     </div>
 </div>
+=======
+<div class="container">
+	<div ng-repeat="promotion in promotions | orderBy:'name'">
+        <div class="col-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4" style="padding: 0 5px;">
+                                <img src="img/{{promotion.img}}" />
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    {{promotion.name}}                
+                                    <img src="img/hot.png"  class="hotIcon">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="label label-primary">Promotion Price: {{promotion.promotionPrice}}</span>
+									<br>
+                                    <span class="label label-warning">
+                                        Usual price: {{promotion.origPrice}}
+                                    </span>        
+                                </div>    
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> .theirs
