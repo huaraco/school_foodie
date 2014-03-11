@@ -18,6 +18,9 @@ app.service('cooKeyService', function ($firebase) {
     this.getRecipe = function (id) {
         return _.findWhere(recipes, { id: id })
     };
+    this.getArticle = function (id) {
+        return _.findWhere(articles,{id:id})
+    }
 
     this.getCategories = function() {
         return categories;
