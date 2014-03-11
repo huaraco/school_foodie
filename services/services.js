@@ -11,6 +11,9 @@ app.service('cooKeyService', function ($firebase) {
     this.getFeaturedArticles = function () {
         return featuredArticles;
     }
+    this.getPreviousArticles = function () {
+        return previousArticles;
+    }
 
     this.getRecipe = function (id) {
         return _.findWhere(recipes, { id: id })
@@ -214,6 +217,27 @@ app.service('cooKeyService', function ($firebase) {
     }
     ];
 
+    var previousArticles = [
+          {
+              id: 1,
+              name: 'New science confirms raw milk is remarkably safe',
+              content: 'How Safe Is Splenda (Sucralose)?',
+              img: 'care_milk.jpg',
+              author: 'Ethan A. Huff',
+              copyright: 'Medical News Today',
+              date: '02/07/2013'
+          },
+      {
+          id: 2,
+          name: 'Eight foods that help fight allergies',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_8food.jpg',
+          author: 'Sandeep Godiyal',
+          copyright: 'Medical News Today',
+          date: '02/07/2013'
+      }
+
+    ];
     var articles = [
     {
         id: 1,
@@ -259,25 +283,8 @@ app.service('cooKeyService', function ($firebase) {
           author: 'Sandeep Godiyal',
           copyright: 'Medical News Today',
           date: '11/07/2013'
-      },
-      {
-          id: 6,
-          name: 'New science confirms raw milk is remarkably safe',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_milk.jpg',
-          author: 'Ethan A. Huff',
-          copyright: 'Medical News Today',
-          date: '02/07/2013'
-      },
-      {
-          id: 7,
-          name: 'Eight foods that help fight allergies',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_8food.jpg',
-          author: 'Sandeep Godiyal',
-          copyright: 'Medical News Today',
-          date: '01/07/2013'
-      },
+      }
+    
     ];
 
     var featuredArticles = [
@@ -319,7 +326,7 @@ app.service('cooKeyService', function ($firebase) {
          author: 'Sandeep Godiyal',
          copyright: 'Medical News Today',
          date: '01/07/2013'
-     },
+     }
     ];
 
 });

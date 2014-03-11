@@ -79,11 +79,19 @@ app.controller('diyResultController', function ($scope, cooKeyService) {
 
 app.controller('careController', function ($scope, cooKeyService) {
     $scope.articles = cooKeyService.getArticles();
+    $scope.previousArticles = cooKeyService.getPreviousArticles();
     $scope.featuredArticles = cooKeyService.getFeaturedArticles();
+    
 });
 
-app.controller('careDetailController', function ($scope, cooKeyService) {
-
+app.controller('careDetailController', function ($scope, $routeParams, cooKeyService) {
+    init();
+    function init() {
+        var careId = ($routeParams.careId) ? parseInt($routeParams.careId) : 0;
+        if (careId > 0) {
+            $scope.article = cooKeyService.getArticle(careId);
+        }
+    }
 });
 
 app.controller('promotionController', function ($scope, $firebase, cooKeyService) {
