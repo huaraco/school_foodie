@@ -1,1 +1,28 @@
-﻿IngrePedia
+﻿<!--list categories-->
+<div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px; background: rgba(0,0,0,0.7)">
+    <div class="row text-center" id="bottomNav">
+
+        <div class="col-xs-3" ng-repeat="cat in categories" style="padding:10px; margin:0px;" ng-class="{'active':cat.id == selectedCategoryId}">
+            <a id="a{{cat.id}}" ng-click="showCategory(cat.id)">{{cat.name}}</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!--display ingredients of each category-->
+<div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
+    <div class="row">
+        <div class="col-xs-3" ng-repeat="ingre in showIngredients(cat.id)">
+            <div class="">
+                <div class="panel-body">
+                    <img src="img/{{ingre.img}}" class="thumbnail"  />
+                </div>
+				<div class="panel-heading">
+                    {{ingre.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

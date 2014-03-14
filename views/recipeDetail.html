@@ -34,7 +34,7 @@
         <h3>Steps</h3>
         <table class="table">
             <tr ng-repeat="step in recipe.steps">
-                <td>{{step.description}}</td>
+                <td ><span ng-bind-html="step.description" ></span></td>
                 <td><img src="img/{{step.img}}" alt="" /></td>
             </tr>
         </table>

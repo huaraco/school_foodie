@@ -23,13 +23,14 @@ app.controller('recipeController', function ($scope, cooKeyService) {
     $scope.recipes = cooKeyService.getRecipes();
 });
 
-app.controller('recipeDetailController', function ($scope, $routeParams, cooKeyService) {
+app.controller('recipeDetailController', function ($scope, $routeParams, $sce, cooKeyService) {
 
     init();
     function init() {
         var recipeId = ($routeParams.recipeId) ? parseInt($routeParams.recipeId) : 0;
         if (recipeId > 0) {
             $scope.recipe = cooKeyService.getRecipe(recipeId);
+            $scope.recipe.steps.test = $sce.trustAsHtml("<b>test</b>");
         }
     }
 
@@ -101,5 +102,27 @@ app.controller('promotionListController', function ($scope, $routeParams, cooKey
 });
 
 app.controller('ingredientController', function ($scope, cooKeyService) {
+    $scope.categories = cooKeyService.getCategories();
 
+    $scope.selectedCategoryId = $scope.categories[0].id;
+
+    $scope.showCategory = function (categoryId) {
+        $scope.selectedCategoryId = categoryId;
+    }
+
+    $scope.showIngredients = function (categoryId) {
+        return cooKeyService.getIngredientsOfCateogry(categoryId);
+    }
+
+    $scope.addIngredient = function (ingredient) {
+
+        if (!_.contains($scope.selectedIngredients, ingredient))
+            $scope.$parent.diyIngredients.push(ingredient);
+    }
+
+    $scope.removeIngredient = function (ingredient) {
+        $scope.$parent.diyIngredients = $scope.$parent.diyIngredients.filter(function (item) {
+            return item != ingredient;
+        });
+    }
 });
