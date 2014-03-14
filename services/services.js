@@ -11,10 +11,16 @@ app.service('cooKeyService', function ($firebase) {
     this.getFeaturedArticles = function () {
         return featuredArticles;
     }
+    this.getPreviousArticles = function () {
+        return previousArticles;
+    }
 
     this.getRecipe = function (id) {
         return _.findWhere(recipes, { id: id })
     };
+    this.getArticle = function (id) {
+        return _.findWhere(articles,{id:id})
+    }
 
     this.getCategories = function() {
         return categories;
@@ -60,49 +66,49 @@ app.service('cooKeyService', function ($firebase) {
             name: 'chili',
             unit: 'g',
             categoryId: 4,
-            img: ''
+            img: 'chilli.jpg'
         },
         {
             id: 2,
             name: 'crab',
             unit: '',
             categoryId: 3,
-            img: ''
+            img: 'crab.jpg'
         },
         {
             id: 3,
             name: 'pork',
             unit: '',
             categoryId: 1,
-            img: ''
+            img: 'pork.jpg'
         },
         {
             id: 4,
             name: 'cabbage',
             unit: '',
             categoryId: 2,
-            img: ''
+            img: 'cabbage.jpg'
         },
         {
             id: 5,
             name: 'beef',
             unit: '',
             categoryId: 1,
-            img: ''
+            img: 'beef.jpg'
         },
         {
             id: 6,
             name: 'chicken',
             unit: '',
             categoryId: 1,
-            img: ''
+            img: 'chicken.jpg'
         },
     ];
 
     var recipes = [
     {
         id: 1,
-        name: 'Chili Grab',
+        name: 'Chilli Crab',
         dLvl: 'Hard',
         spicy: 3,
         duration: 35,
@@ -112,13 +118,13 @@ app.service('cooKeyService', function ($firebase) {
         ingredients: [
             {
                 id: 1,
-                name: 'chili',
+                name: 'chilli',
                 quantity: 20,
                 unit: 'g'
             },
             {
                 id: 2,
-                name: 'grab',
+                name: 'crab',
                 quantity: 2,
                 unit: ''
             }
@@ -145,11 +151,11 @@ app.service('cooKeyService', function ($firebase) {
         spicy: 1,
         duration: 35,
         img: 'currychicken1.jpg',
-        description: 'Chili Grab is a traditional singaporean food',
+        description: 'chilli Grab is a traditional singaporean food',
         ingredients: [
             {
                 id: 1,
-                name: 'chili',
+                name: 'chilli',
                 quantity: 20,
                 unit: 'g'
             },
@@ -164,7 +170,7 @@ app.service('cooKeyService', function ($firebase) {
             {
                 sequence: 1,
                 name: 'prepare',
-                description: 'clean your dishes <a href="#/recipe/1">chili crab</a>',
+                description: 'clean your dishes <a href="#/recipe/1">chilli crab</a>',
                 img: '',
             },
             {
@@ -182,11 +188,11 @@ app.service('cooKeyService', function ($firebase) {
         spicy: 2,
         duration: 15,
         img: 'chicken2.jpg',
-        description: 'Chili Grab is a traditional singaporean food',
+        description: 'chilli Grab is a traditional singaporean food',
         ingredients: [
             {
                 id: 1,
-                name: 'chili',
+                name: 'chilli',
                 quantity: 20,
                 unit: 'g'
             },
@@ -214,6 +220,27 @@ app.service('cooKeyService', function ($firebase) {
     }
     ];
 
+    var previousArticles = [
+          {
+              id: 1,
+              name: 'New science confirms raw milk is remarkably safe',
+              content: 'How Safe Is Splenda (Sucralose)?',
+              img: 'care_milk.jpg',
+              author: 'Ethan A. Huff',
+              copyright: 'Medical News Today',
+              date: '02/07/2013'
+          },
+      {
+          id: 2,
+          name: 'Eight foods that help fight allergies',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_8food.jpg',
+          author: 'Sandeep Godiyal',
+          copyright: 'Medical News Today',
+          date: '02/07/2013'
+      }
+
+    ];
     var articles = [
     {
         id: 1,
@@ -259,25 +286,8 @@ app.service('cooKeyService', function ($firebase) {
           author: 'Sandeep Godiyal',
           copyright: 'Medical News Today',
           date: '11/07/2013'
-      },
-      {
-          id: 6,
-          name: 'New science confirms raw milk is remarkably safe',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_milk.jpg',
-          author: 'Ethan A. Huff',
-          copyright: 'Medical News Today',
-          date: '02/07/2013'
-      },
-      {
-          id: 7,
-          name: 'Eight foods that help fight allergies',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_8food.jpg',
-          author: 'Sandeep Godiyal',
-          copyright: 'Medical News Today',
-          date: '01/07/2013'
-      },
+      }
+    
     ];
 
     var featuredArticles = [
@@ -319,7 +329,7 @@ app.service('cooKeyService', function ($firebase) {
          author: 'Sandeep Godiyal',
          copyright: 'Medical News Today',
          date: '01/07/2013'
-     },
+     }
     ];
 
 });

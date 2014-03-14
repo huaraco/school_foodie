@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var app = angular.module('cooKeyApp', ['ngRoute','firebase','ngSanitize']);
+=======
+var app = angular.module('cooKeyApp', ['ngRoute', 'firebase']);
+>>>>>>> 2bc377b06a17f1222b23f63f62f89f68edafd690
 
 //This configures the routes and associates each route with a view and a controller
 app.config(function ($routeProvider) {
@@ -28,7 +32,7 @@ app.config(function ($routeProvider) {
                 controller: 'careController',
                 templateUrl: 'views/care.html'
             })
-        .when('/careDetail/:careId',
+        .when('/care/:careId',
             {
                 controller: 'careDetailController',
                 templateUrl: 'views/careDetail.html'
