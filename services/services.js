@@ -12,7 +12,6 @@ app.service('cooKeyService', function ($firebase) {
         return featuredArticles;
     }
     this.getPreviousArticles = function () {
-
         return previousArticles;
     }
 
@@ -48,6 +47,10 @@ app.service('cooKeyService', function ($firebase) {
             return !_.isUndefined(_.findWhere(recipe.ingredients, { id: id }));
         });
         return ingredient;
+    }
+
+    this.getIngredients = function() {
+        return ingredients;
     }
 
     var categories = [

@@ -59,6 +59,9 @@ app.controller('diyController', function ($scope, cooKeyService) {
             return item != ingredient;
         });
     }
+
+    $scope.ingredients = cooKeyService.getIngredients();
+    $scope.$parent.searchKeyWord = '';
 });
 
 app.controller('diyResultController', function ($scope, cooKeyService) {
@@ -132,6 +135,10 @@ app.controller('ingredientController', function ($scope, cooKeyService) {
             return item != ingredient;
         });
     }
+
+    $scope.ingredients = cooKeyService.getIngredients();
+    $scope.$parent.searchKeyWord = '';
+
 });
 
 app.controller('ingredientDetailController', function ($scope, $routeParams, cooKeyService) {
