@@ -19,10 +19,10 @@ app.service('cooKeyService', function ($firebase) {
         return _.findWhere(recipes, { id: id })
     };
     this.getArticle = function (id) {
-        return _.findWhere(articles,{id:id})
+        return _.findWhere(articles, { id: id })
     }
 
-    this.getCategories = function() {
+    this.getCategories = function () {
         return categories;
     }
 
@@ -31,25 +31,25 @@ app.service('cooKeyService', function ($firebase) {
         return _.where(ingredients, { categoryId: categoryId });
     };
 
-    this.getPromotions = function(){
+    this.getPromotions = function () {
         var storeRef = new Firebase("https://is306cookey.firebaseio.com/Store");
         return $firebase(storeRef);
     }
 
-    this.getStore = function(stroeId){
-        var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/"+stroeId+"/promotion");
+    this.getStore = function (stroeId) {
+        var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/" + stroeId + "/promotion");
         return $firebase(promotionRef);
     }
 
     this.getIngredient = function (id) {
         var ingredient = _.findWhere(ingredients, { id: id });
-        ingredient.recipes = _.filter(recipes, function(recipe) {
+        ingredient.recipes = _.filter(recipes, function (recipe) {
             return !_.isUndefined(_.findWhere(recipe.ingredients, { id: id }));
         });
         return ingredient;
     }
 
-    this.getIngredients = function() {
+    this.getIngredients = function () {
         return ingredients;
     }
 
@@ -233,7 +233,7 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-		  url:'//www.youtube.com/embed/oI3qHUFfyXo'
+          url: '//www.youtube.com/embed/oI3qHUFfyXo'
       },
       {
           id: 2,
@@ -329,53 +329,19 @@ app.service('cooKeyService', function ($firebase) {
           author: 'Sandeep Godiyal',
           copyright: 'Medical News Today',
           date: '02/07/2013'
-      }
-
-    ];
-
-    var articles = [
-    {
-        id: 1,
-        name: 'Peanut butter helps diagnose Alzheimers disease',
-        content: 'adfasdfasdfasfd',
-        img: 'care_peanutButter.jpg',
-        author: 'Belinda Weber',
-        copyright: 'Medical News Today',
-        date: '12/10/2013',
-        tag: 'Peanut'
-    },
-    {
-        id: 2,
-        name: 'How Safe Is Splenda (Sucralose)?',
-        content: 'How Safe Is Splenda (Sucralose)?',
-        img: 'care_splenda.jpg',
-        author: 'Christian Nordqvist',
-        copyright: 'Medical News Today',
-        date: '25/06/2013',
-        tag: 'Splenda'
-    },
-     {
-         id: 3,
-         name: 'Hot chocolate may prevent memory decline',
-         content: 'How Safe Is Splenda (Sucralose)?',
-         img: 'care_chocolate.jpg',
-         author: 'Dr.Catharine Paddock',
-         copyright: 'Medical News Today',
-         date: '08/08/2013',
-         tag: 'Chocolate'
-     },
+      },
+         {
+             id: 3,
+             name: 'Quinoa nutritional benefits',
+             content: 'How Safe Is Splenda (Sucralose)?',
+             img: 'care_quinoa.jpg',
+             author: 'Yanjun',
+             copyright: 'Medical News Today',
+             date: '09/08/2013',
+             tag: 'Quinoa'
+         },
       {
           id: 4,
-          name: 'Quinoa nutritional benefits',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_quinoa.jpg',
-          author: 'Yanjun',
-          copyright: 'Medical News Today',
-          date: '09/08/2013',
-          tag: 'Quinoa'
-      },
-      {
-          id: 5,
           name: 'Five healthy snacks you can enjoy without guilt',
           content: 'How Safe Is Splenda (Sucralose)?',
           img: 'care_snack.jpg',
@@ -383,8 +349,74 @@ app.service('cooKeyService', function ($firebase) {
           copyright: 'Medical News Today',
           date: '11/07/2013',
           tag: 'Snack'
-      }
-    
+      },
+
+
+    ];
+
+    var articles = [
+         {
+             id: 1,
+             name: 'The Nutrition of Crab',
+             content: 'How Safe Is Splenda (Sucralose)?',
+             img: 'care_crab.png',
+             author: 'Janet D. Embanecido',
+             copyright: 'Medical News Today',
+             date: '18/03/2014',
+             tag: 'crab'
+         },
+
+                 {
+                     id: 2,
+                     name: 'Omega-3 in fish: How eating fish helps your heart',
+                     content: 'How Safe Is Splenda (Sucralose)?',
+                     img: 'care_fish.jpg',
+                     author: 'Mayo Clinic Staff',
+                     copyright: 'Medical News Today',
+                     date: '18/03/2014',
+                     tag: 'fish'
+                 },
+                     {
+                         id: 3,
+                         name: 'The Amazing Health Benefits of Black Pepper',
+                         content: 'How Safe Is Splenda (Sucralose)?',
+                         img: 'care_blackpepper.jpg',
+                         author: 'Kassidy Emmerson',
+                         copyright: 'Medical News Today',
+                         date: '18/03/2014',
+                         tag: 'blackpepper'
+                     },
+        {
+            id: 4,
+            name: 'Peanut butter helps diagnose Alzheimers disease',
+            content: 'adfasdfasdfasfd',
+            img: 'care_peanutButter.jpg',
+            author: 'Belinda Weber',
+            copyright: 'Medical News Today',
+            date: '18/03/2014',
+            tag: 'Peanut'
+        },
+    {
+        id: 5,
+        name: 'How Safe Is Splenda (Sucralose)?',
+        content: 'How Safe Is Splenda (Sucralose)?',
+        img: 'care_splenda.jpg',
+        author: 'Christian Nordqvist',
+        copyright: 'Medical News Today',
+        date: '18/03/2014',
+        tag: 'Splenda'
+    },
+     {
+         id: 6,
+         name: 'Hot chocolate may prevent memory decline',
+         content: 'How Safe Is Splenda (Sucralose)?',
+         img: 'care_chocolate.jpg',
+         author: 'Dr.Catharine Paddock',
+         copyright: 'Medical News Today',
+         date: '18/03/2014',
+         tag: 'Chocolate'
+     }
+
     ];
 
     var featuredArticles = [
@@ -398,7 +430,7 @@ app.service('cooKeyService', function ($firebase) {
        date: '12/10/2013',
        tag: 'Peanut'
    },
-   
+
     {
         id: 2,
         name: 'Hot chocolate may prevent memory decline',
@@ -409,7 +441,7 @@ app.service('cooKeyService', function ($firebase) {
         date: '08/08/2013',
         tag: 'Chocolate'
     },
-     
+
      {
          id: 3,
          name: 'Five healthy snacks you can enjoy without guilt',
@@ -420,7 +452,7 @@ app.service('cooKeyService', function ($firebase) {
          date: '11/07/2013',
          tag: 'Snack'
      },
-    
+
      {
          id: 4,
          name: 'Eight foods that help fight allergies',
