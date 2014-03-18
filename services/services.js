@@ -53,42 +53,42 @@ app.service('cooKeyService', function ($firebase) {
     var categories = [
         {
             id: 1,
-            name: 'meat'
+            name: 'Meat'
         },
         {
             id: 2,
-            name: 'vegetable'
+            name: 'Vegetable'
         },
         {
             id: 3,
-            name: 'sea food'
+            name: 'Seafood'
         },
         {
             id: 4,
-            name: 'others'
+            name: 'Others'
         }
     ];
 
     var ingredients = [
         {
             id: 1,
-            name: 'chili',
+            name: 'Chili',
             unit: 'g',
             categoryId: 4,
             img: 'chilli.jpg',
-            description: 'chili is spicy'
+            description: 'Chili is spicy'
         },
         {
             id: 2,
-            name: 'crab',
+            name: 'Crab',
             unit: '',
             categoryId: 3,
-            img: 'crab.jpg',
+            img: 'Crab.jpg',
             description: ''
         },
         {
             id: 3,
-            name: 'pork',
+            name: 'Pork',
             unit: '',
             categoryId: 1,
             img: 'pork.jpg',
@@ -96,7 +96,7 @@ app.service('cooKeyService', function ($firebase) {
         },
         {
             id: 4,
-            name: 'cabbage',
+            name: 'Cabbage',
             unit: '',
             categoryId: 2,
             img: 'cabbage.jpg',
@@ -104,7 +104,7 @@ app.service('cooKeyService', function ($firebase) {
         },
         {
             id: 5,
-            name: 'beef',
+            name: 'Beef',
             unit: '',
             categoryId: 1,
             img: 'beef.jpg',
@@ -112,7 +112,7 @@ app.service('cooKeyService', function ($firebase) {
         },
         {
             id: 6,
-            name: 'chicken',
+            name: 'Chicken',
             unit: '',
             categoryId: 1,
             img: 'chicken.jpg',
@@ -133,31 +133,104 @@ app.service('cooKeyService', function ($firebase) {
           ingredients: [
               {
                   id: 1,
-                  name: 'chilli',
-                  quantity: 20,
+                  name: 'mud crabs or soft shelled crabs',
+                  quantity: 450,
                   unit: 'g'
               },
               {
                   id: 2,
-                  name: 'crab',
+                  name: 'plain flour',
+                  quantity: 4,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 3,
+                  name: 'vegetable oil',
+                  quantity: 3,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 4,
+                  name: 'cloves garlic, roughly chopped',
+                  quantity: 8,
+                  unit: ''
+              },
+              {
+                  id: 5,
+                  name: 'fresh red chilli, roughly chopped',
+                  quantity: 8,
+                  unit: ''
+              },
+              {
+                  id: 6,
+                  name: 'egg',
+                  quantity: 1,
+                  unit: ''
+              },
+              {
+                  id: 7,
+                  name: 'spring onions (scallions), cut into finger length',
                   quantity: 2,
+                  unit: ''
+              },
+              {
+                  id: 8,
+                  name: 'freshly squeezed lime or lemon juice',
+                  quantity: 1,
+                  unit: 'tsp'
+              },
+              {
+                  id: 9,
+                  name: 'small bunch coriander plant (cilantro)',
+                  quantity: 1,
                   unit: ''
               }
           ],
           steps: [
               {
                   sequence: 1,
-                  name: 'prepare',
-                  description: 'clean your dishes',
+                  name: 'Mix together for Sauce',
+                  description: '1 cup of water, 5 tbsp tomato catsup, 1 1/2 to 3 tbsp sugar, or according to taste, 1 1/2 tsp cornflour, 1 tsp pounded brown preserved soya beans or dark miso (optional), 1/4 tsp salt',
                   img: '',
               },
               {
                   sequence: 2,
-                  name: 'cook',
-                  description: 'cook your dishes',
+                  name: 'Heat',
+                  description: 'Heat the oil in a wok or shallow saucepan over high heat. ',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'Heat',
+                  description: 'Add garlic and stir-fry for 1 minute. ',
+                  img: '',
+              },
+              {
+                  sequence: 4,
+                  name: 'Heat',
+                  description: 'Add the chilli, stir-fry till fragrant. For mud crabs, add at this stage. Fry well till shells start turning red, add sauce ingredients stir well, cover with lid and simmer till shells are red. ',
+                  img: '',
+              },
+              {
+                  sequence: 5,
+                  name: 'Heat',
+                  description: 'Break eggs into the wok and streak with a fork, simmer till cooked. Squeeze lime juice over and stir in scallions. ',
+                  img: '',
+              },
+              {
+                  sequence: 6,
+                  name: 'Heat',
+                  description: 'For soft-shelled crabs, cut each crab into four, dry well, dredge in flour and deep fry till golden brown and crispy. Make the sauce as above, but omit the mud crabs. ',
+                  img: '',
+              },
+              {
+                  sequence: 7,
+                  name: 'Heat',
+                  description: 'Toss soft shelled crabs in sauce just before serving.',
                   img: '',
               }
-          ]
+          ],
+		  url:'//www.youtube.com/embed/oI3qHUFfyXo'
       },
       {
           id: 2,
