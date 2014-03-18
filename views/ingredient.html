@@ -9,20 +9,27 @@
     </div>
 </div>
 
-<div ng-show="searchKeyWord==''">
-    <!--list categories-->
-    <div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px; background: rgba(0,0,0,0.7)">
-        <div class="row text-center" id="bottomNav">
-            <div class="col-xs-3" ng-repeat="cat in categories" style="padding:10px; margin:0px;" ng-class="{'active':cat.id == selectedCategoryId}">
-                <a id="a{{cat.id}}" ng-click="showCategory(cat.id)">{{cat.name}}</a>
-            </div>
-        </div>
+<div class="form-group" style="padding:10px;">
+    <h2 style="text-align:center;">Ingredient</h2>
+    <input type="text" ng-model="ingredientSearch" class="form-control" style="font-size: 15pt; height:50px;" />
+    
+    <div class="ingredientList"  ng-show="ingredientSearch != '' ">
+        <ul class="list-inline">
+            <li ng-repeat="ingre in ingredients | filter: ingredientSearch" class="text-center">
+                <a href="#/ingredient/{{ingre.id}}">
+                    <img src="img/{{ingre.img}}" class="thumbnail" style="height:70px;" />
+                    <span>{{ingre.name}}</span>
+                </a>
+            </li>
+        </ul>
     </div>
+</div>
 
-    <div class="container ingredientList">
-        <div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
+<div ng-hide="ingredientSearch != '' ">
+    <div class="ingredientList row">
+        <div class="col-xs-12 well" style="margin:20px;">
             <ul class="list-inline">
-                <li ng-repeat="ingre in showIngredients(cat.id)" class="text-center">
+                <li ng-repeat="ingre in specialIngredients" class="text-center">
                     <a href="#/ingredient/{{ingre.id}}">
                         <img src="img/{{ingre.img}}" class="thumbnail" style="height:70px;" />
                         <span>{{ingre.name}}</span>
@@ -32,3 +39,4 @@
         </div>
     </div>
 </div>
+

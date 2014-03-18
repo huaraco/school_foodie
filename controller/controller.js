@@ -114,31 +114,31 @@ app.controller('promotionListController', function ($scope, $routeParams, cooKey
 app.controller('ingredientController', function ($scope, cooKeyService) {
     $scope.categories = cooKeyService.getCategories();
 
-    $scope.selectedCategoryId = $scope.categories[0].id;
+    //$scope.selectedCategoryId = $scope.categories[0].id;
 
-    $scope.showCategory = function (categoryId) {
-        $scope.selectedCategoryId = categoryId;
-    }
+    //$scope.showCategory = function (categoryId) {
+    //    $scope.selectedCategoryId = categoryId;
+    //}
 
-    $scope.showIngredients = function (categoryId) {
-        return cooKeyService.getIngredientsOfCateogry(categoryId);
-    }
+    //$scope.showIngredients = function (categoryId) {
+    //    return cooKeyService.getIngredientsOfCateogry(categoryId);
+    //}
 
-    $scope.addIngredient = function (ingredient) {
+    //$scope.addIngredient = function (ingredient) {
 
-        if (!_.contains($scope.selectedIngredients, ingredient))
-            $scope.$parent.diyIngredients.push(ingredient);
-    }
+    //    if (!_.contains($scope.selectedIngredients, ingredient))
+    //        $scope.$parent.diyIngredients.push(ingredient);
+    //}
 
-    $scope.removeIngredient = function (ingredient) {
-        $scope.$parent.diyIngredients = $scope.$parent.diyIngredients.filter(function (item) {
-            return item != ingredient;
-        });
-    }
-
+    //$scope.removeIngredient = function (ingredient) {
+    //    $scope.$parent.diyIngredients = $scope.$parent.diyIngredients.filter(function (item) {
+    //        return item != ingredient;
+    //    });
+    //}
     $scope.ingredients = cooKeyService.getIngredients();
+    $scope.specialIngredients = cooKeyService.getIngredients().slice(3);
     $scope.$parent.searchKeyWord = '';
-
+    $scope.ingredientSearch = '';
 });
 
 app.controller('ingredientDetailController', function ($scope, $routeParams, cooKeyService) {
