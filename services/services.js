@@ -341,7 +341,8 @@ app.service('cooKeyService', function ($firebase) {
         img: 'care_peanutButter.jpg',
         author: 'Belinda Weber',
         copyright: 'Medical News Today',
-        date: '12/10/2013'
+        date: '12/10/2013',
+        tag: 'Peanut'
     },
     {
         id: 2,
@@ -350,7 +351,8 @@ app.service('cooKeyService', function ($firebase) {
         img: 'care_splenda.jpg',
         author: 'Christian Nordqvist',
         copyright: 'Medical News Today',
-        date: '25/06/2013'
+        date: '25/06/2013',
+        tag: 'Splenda'
     },
      {
          id: 3,
@@ -359,7 +361,8 @@ app.service('cooKeyService', function ($firebase) {
          img: 'care_chocolate.jpg',
          author: 'Dr.Catharine Paddock',
          copyright: 'Medical News Today',
-         date: '08/08/2013'
+         date: '08/08/2013',
+         tag: 'Chocolate'
      },
       {
           id: 4,
@@ -368,7 +371,8 @@ app.service('cooKeyService', function ($firebase) {
           img: 'care_quinoa.jpg',
           author: 'Yanjun',
           copyright: 'Medical News Today',
-          date: '09/08/2013'
+          date: '09/08/2013',
+          tag: 'Quinoa'
       },
       {
           id: 5,
@@ -377,7 +381,8 @@ app.service('cooKeyService', function ($firebase) {
           img: 'care_snack.jpg',
           author: 'Sandeep Godiyal',
           copyright: 'Medical News Today',
-          date: '11/07/2013'
+          date: '11/07/2013',
+          tag: 'Snack'
       }
     
     ];
@@ -390,7 +395,8 @@ app.service('cooKeyService', function ($firebase) {
        img: 'care_peanutButter.jpg',
        author: 'Belinda Weber',
        copyright: 'Medical News Today',
-       date: '12/10/2013'
+       date: '12/10/2013',
+       tag: 'Peanut'
    },
    
     {
@@ -400,7 +406,8 @@ app.service('cooKeyService', function ($firebase) {
         img: 'care_chocolate.jpg',
         author: 'Dr.Catharine Paddock',
         copyright: 'Medical News Today',
-        date: '08/08/2013'
+        date: '08/08/2013',
+        tag: 'Chocolate'
     },
      
      {
@@ -410,7 +417,8 @@ app.service('cooKeyService', function ($firebase) {
          img: 'care_snack.jpg',
          author: 'Sandeep Godiyal',
          copyright: 'Medical News Today',
-         date: '11/07/2013'
+         date: '11/07/2013',
+         tag: 'Snack'
      },
     
      {
@@ -420,7 +428,8 @@ app.service('cooKeyService', function ($firebase) {
          img: 'care_8food.jpg',
          author: 'Sandeep Godiyal',
          copyright: 'Medical News Today',
-         date: '01/07/2013'
+         date: '01/07/2013',
+         tag: 'Beef'
      }
     ];
 
