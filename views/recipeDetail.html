@@ -23,7 +23,7 @@
                 <th>Qty</th>
             </tr>
             <tr ng-repeat="ingre in recipe.ingredients">
-                <td>{{ingre.name}}</td>
+                <td><a href="#/ingredient/{{ingre.id}}">{{ingre.name}}</a></td>
                 <td>x {{ingre.quantity}} {{ingre.unit}}</td>
             </tr>
         </table>

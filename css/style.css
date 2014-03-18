@@ -105,3 +105,21 @@ input.holo[type='text'] {
         background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat, bottom center linear-gradient(#0099cc, #0099cc) repeat-x, bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
         background-size: 1px 6px, 1px 1px, 1px 6px;
     }
+
+.ingredientList ul li {
+    padding: 0px;
+    margin: 6px;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ingredientList span {
+    display: inline-block;
+    
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

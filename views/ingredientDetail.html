@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4" style="padding:0 0px; height:250px;overflow:hidden;">
+        <img src="img/{{ingredient.img}}" alt="" style="width:100%; " class="thumbnail" />
+        <div style=" position:absolute; top:0; margin:5px;  text-align:center; background:rgba(0,0,0,0.5); color:white;">
+            <h3 style="margin:10px 20px;">{{ingredient.name}}</h3>
+        </div>
+        <div style=" position:absolute; bottom:0; margin:5px; text-align:center; background:rgba(0,0,0,0.5); color:white;">
+            <h6 style="margin:10px 20px;"></h6>
+        </div>
+        <!--<div style=" position:absolute; right:35px; top:0; margin:5px; text-align:center; background:rgba(0,0,0,0.5); color:white;">
+            <h6 style="margin:10px 20px;">Difficult Level: {{recipe.dLvl}}</h6>
+        </div>-->
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-success">{{ingredient.description}}</div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Recipes</div>
+    <div class="panel-body ingredientList" style="text-align:center;">
+
+        <ul class="list-inline">
+            <li ng-repeat="recipe in ingredient.recipes" class="text-center">
+                <a href="#/recipe/{{recipe.id}}">
+                    <img src="img/{{recipe.img}}" class="thumbnail" style="height:70px;" />
+                    <span>{{recipe.name}}</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>

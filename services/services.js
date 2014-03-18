@@ -12,6 +12,7 @@ app.service('cooKeyService', function ($firebase) {
         return featuredArticles;
     }
     this.getPreviousArticles = function () {
+
         return previousArticles;
     }
 
@@ -27,7 +28,7 @@ app.service('cooKeyService', function ($firebase) {
     }
 
     //get ingredients of certain category
-    this.getIngredientsOfCateogry = function(categoryId) {
+    this.getIngredientsOfCateogry = function (categoryId) {
         return _.where(ingredients, { categoryId: categoryId });
     };
 
@@ -39,6 +40,14 @@ app.service('cooKeyService', function ($firebase) {
     this.getStore = function(stroeId){
         var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/"+stroeId+"/promotion");
         return $firebase(promotionRef);
+    }
+
+    this.getIngredient = function (id) {
+        var ingredient = _.findWhere(ingredients, { id: id });
+        ingredient.recipes = _.filter(recipes, function(recipe) {
+            return !_.isUndefined(_.findWhere(recipe.ingredients, { id: id }));
+        });
+        return ingredient;
     }
 
     var categories = [
@@ -66,170 +75,176 @@ app.service('cooKeyService', function ($firebase) {
             name: 'chili',
             unit: 'g',
             categoryId: 4,
-            img: 'chilli.jpg'
+            img: 'chilli.jpg',
+            description: 'chili is spicy'
         },
         {
             id: 2,
             name: 'crab',
             unit: '',
             categoryId: 3,
-            img: 'crab.jpg'
+            img: 'crab.jpg',
+            description: ''
         },
         {
             id: 3,
             name: 'pork',
             unit: '',
             categoryId: 1,
-            img: 'pork.jpg'
+            img: 'pork.jpg',
+            description: ''
         },
         {
             id: 4,
             name: 'cabbage',
             unit: '',
             categoryId: 2,
-            img: 'cabbage.jpg'
+            img: 'cabbage.jpg',
+            description: ''
         },
         {
             id: 5,
             name: 'beef',
             unit: '',
             categoryId: 1,
-            img: 'beef.jpg'
+            img: 'beef.jpg',
+            description: ''
         },
         {
             id: 6,
             name: 'chicken',
             unit: '',
             categoryId: 1,
-            img: 'chicken.jpg'
+            img: 'chicken.jpg',
+            description: ''
         },
     ];
 
     var recipes = [
-    {
-        id: 1,
-        name: 'Chilli Crab',
-        dLvl: 'Hard',
-        spicy: 3,
-        duration: 35,
-        img: 'chiligrab1.jpg',
-        description: 'Chili Grab is a traditional singaporean food',
-        isHot: true,
-        ingredients: [
-            {
-                id: 1,
-                name: 'chilli',
-                quantity: 20,
-                unit: 'g'
-            },
-            {
-                id: 2,
-                name: 'crab',
-                quantity: 2,
-                unit: ''
-            }
-        ],
-        steps: [
-            {
-                sequence: 1,
-                name: 'prepare',
-                description: 'clean your dishes',
-                img: '',
-            },
-            {
-                sequence: 2,
-                name: 'cook',
-                description: 'cook your dishes',
-                img: '',
-            }
-        ]
-    },
-    {
-        id: 2,
-        name: 'Curry Chicken',
-        dLvl: 'Median',
-        spicy: 1,
-        duration: 35,
-        img: 'currychicken1.jpg',
-        description: 'chilli Grab is a traditional singaporean food',
-        ingredients: [
-            {
-                id: 1,
-                name: 'chilli',
-                quantity: 20,
-                unit: 'g'
-            },
-            {
-                id: 6,
-                name: 'chicken',
-                quantity: 2,
-                unit: ''
-            }
-        ],
-        steps: [
-            {
-                sequence: 1,
-                name: 'prepare',
-                description: 'clean your dishes <a href="#/recipe/1">chilli crab</a>',
-                img: '',
-            },
-            {
-                sequence: 2,
-                name: 'cook',
-                description: 'cook your dishes',
-                img: '',
-            }
-        ]
-    },
-    {
-        id: 3,
-        name: 'Fragrant Pepper Chicken',
-        dLvl: 'Easy',
-        spicy: 2,
-        duration: 15,
-        img: 'chicken2.jpg',
-        description: 'chilli Grab is a traditional singaporean food',
-        ingredients: [
-            {
-                id: 1,
-                name: 'chilli',
-                quantity: 20,
-                unit: 'g'
-            },
-            {
-                id: 6,
-                name: 'chicken',
-                quantity: 2,
-                unit: ''
-            }
-        ],
-        steps: [
-            {
-                sequence: 1,
-                name: 'prepare',
-                description: 'clean your dishes',
-                img: '',
-            },
-            {
-                sequence: 2,
-                name: 'cook',
-                description: 'cook your dishes',
-                img: '',
-            }
-        ]
-    }
+      {
+          id: 1,
+          name: 'Chilli Crab',
+          dLvl: 'Hard',
+          spicy: 3,
+          duration: 35,
+          img: 'chiligrab1.jpg',
+          description: 'Chili Grab is a traditional singaporean food',
+          isHot: true,
+          ingredients: [
+              {
+                  id: 1,
+                  name: 'chilli',
+                  quantity: 20,
+                  unit: 'g'
+              },
+              {
+                  id: 2,
+                  name: 'crab',
+                  quantity: 2,
+                  unit: ''
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'clean your dishes',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'cook',
+                  description: 'cook your dishes',
+                  img: '',
+              }
+          ]
+      },
+      {
+          id: 2,
+          name: 'Curry Chicken',
+          dLvl: 'Median',
+          spicy: 1,
+          duration: 35,
+          img: 'currychicken1.jpg',
+          description: 'chilli Grab is a traditional singaporean food',
+          ingredients: [
+              {
+                  id: 1,
+                  name: 'chilli',
+                  quantity: 20,
+                  unit: 'g'
+              },
+              {
+                  id: 6,
+                  name: 'chicken',
+                  quantity: 2,
+                  unit: ''
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'clean your dishes <a href="#/recipe/1">chilli crab</a>',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'cook',
+                  description: 'cook your dishes',
+                  img: '',
+              }
+          ]
+      },
+      {
+          id: 3,
+          name: 'Fragrant Pepper Chicken',
+          dLvl: 'Easy',
+          spicy: 2,
+          duration: 15,
+          img: 'chicken2.jpg',
+          description: 'chilli Grab is a traditional singaporean food',
+          ingredients: [
+              {
+                  id: 1,
+                  name: 'chilli',
+                  quantity: 20,
+                  unit: 'g'
+              },
+              {
+                  id: 6,
+                  name: 'chicken',
+                  quantity: 2,
+                  unit: ''
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'clean your dishes',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'cook',
+                  description: 'cook your dishes',
+                  img: '',
+              }
+          ]
+      }
     ];
 
     var previousArticles = [
-          {
-              id: 1,
-              name: 'New science confirms raw milk is remarkably safe',
-              content: 'How Safe Is Splenda (Sucralose)?',
-              img: 'care_milk.jpg',
-              author: 'Ethan A. Huff',
-              copyright: 'Medical News Today',
-              date: '02/07/2013'
-          },
+      {
+          id: 1,
+          name: 'New science confirms raw milk is remarkably safe',
+          content: 'How Safe Is Splenda (Sucralose)?',
+          img: 'care_milk.jpg',
+          author: 'Ethan A. Huff',
+          copyright: 'Medical News Today',
+          date: '02/07/2013'
+      },
       {
           id: 2,
           name: 'Eight foods that help fight allergies',
@@ -241,6 +256,7 @@ app.service('cooKeyService', function ($firebase) {
       }
 
     ];
+
     var articles = [
     {
         id: 1,

@@ -10,8 +10,19 @@
 
 </div>
 
+<div class="container ingredientList">
+    <div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
+        <ul  class="list-inline">
+            <li ng-repeat="ingre in showIngredients(cat.id)" class="text-center" >
+                <img src="img/{{ingre.img}}" class="thumbnail" style="height:70px;" ng-click="addIngredient(ingre)" />
+                <span>{{ingre.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <!--display ingredients of each category-->
-<div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
+<!-- <div ng-repeat="cat in categories" ng-show="selectedCategoryId==cat.id">
     <div class="row">
         <div class="col-xs-3" ng-repeat="ingre in showIngredients(cat.id)">
             <div class="panel panel-default">
@@ -24,7 +35,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!--list selected ingredients-->
 <div class="well well-small" style="position:absolute; bottom:10px; width:100%;">

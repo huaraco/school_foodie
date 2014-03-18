@@ -50,8 +50,7 @@ app.controller('diyController', function ($scope, cooKeyService) {
     }
 
     $scope.addIngredient = function (ingredient) {
-
-        if (!_.contains($scope.selectedIngredients, ingredient))
+        if (!_.contains($scope.$parent.diyIngredients, ingredient))
             $scope.$parent.diyIngredients.push(ingredient);
     }
 
@@ -133,4 +132,15 @@ app.controller('ingredientController', function ($scope, cooKeyService) {
             return item != ingredient;
         });
     }
+});
+
+app.controller('ingredientDetailController', function ($scope, $routeParams, cooKeyService) {
+    init();
+    
+    function init() {
+        var ingredientId = ($routeParams.ingredientId) ? parseInt($routeParams.ingredientId) : 0;
+        if (ingredientId > 0) {
+            $scope.ingredient = cooKeyService.getIngredient(ingredientId);
+        }
+    } 
 });
