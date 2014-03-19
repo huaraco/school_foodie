@@ -78,9 +78,9 @@ app.service('cooKeyService', function ($firebase) {
     var ingredients = [
         {
             id: 1,
-            name: 'Chili',
+            name: 'Chilli',
             unit: 'g',
-            categoryId: 4,
+            categoryId: 2,
             img: 'chilli.jpg',
             description: 'Chili is spicy'
         },
@@ -123,7 +123,562 @@ app.service('cooKeyService', function ($firebase) {
             categoryId: 1,
             img: 'chicken.jpg',
             description: ''
+        },{
+            id: 7,
+            name: 'Flour',
+            unit: '',
+            categoryId: 4,
+            img: 'flour.jpg',
+            description: ''
+        },{
+            id: 8,
+            name: 'Cilantro',
+            unit: '',
+            categoryId: 2,
+            img: 'corianderplant.jpg',
+            description: ''
+        },{
+            id: 9,
+            name: 'Garlic',
+            unit: '',
+            categoryId: 4,
+            img: 'garlic.jpg',
+            description: ''
+        },{
+            id: 10,
+            name: 'Lime',
+            unit: '',
+            categoryId: 4,
+            img: 'lime.jpg',
+            description: ''
+        },{
+            id: 11,
+            name: 'Spring Onion',
+            unit: '',
+            categoryId: 2,
+            img: 'springOnion.jpg',
+            description: ''
+        },{
+            id: 12,
+            name: 'Vegetable Oil',
+            unit: '',
+            categoryId: 4,
+            img: 'vegetableoil.jpg',
+            description: ''
         },
+		{
+            id: 13,
+            name: 'Egg',
+            unit: '',
+            categoryId: 1,
+            img: 'egg.jpg',
+            description: ''
+        },
+		{
+            id: 14,
+            name: 'Potato',
+            unit: '',
+            categoryId: 2,
+            img: 'potato.jpg',
+            description: ''
+        },{
+            id: 15,
+            name: 'Onion',
+            unit: '',
+            categoryId: 2,
+            img: 'onion.jpg',
+            description: ''
+        },{
+            id: 16,
+            name: 'Dried Red Chilli',
+            unit: '',
+            categoryId: 2,
+            img: 'driedredchilli.jpg',
+            description: ''
+        },{
+            id: 17,
+            name: 'Tumeric',
+            unit: '',
+            categoryId: 4,
+            img: 'tumeric.jpg',
+            description: ''
+        },{
+            id: 18,
+            name: 'Galangal',
+            unit: '',
+            categoryId: 4,
+            img: 'galangal.jpg',
+            description: ''
+        },{
+            id: 19,
+            name: 'Ginger',
+            unit: '',
+            categoryId: 2,
+            img: 'ginger.jpg',
+            description: ''
+        },{
+            id: 20,
+            name: 'Candlenut',
+            unit: '',
+            categoryId: 4,
+            img: 'candlenut.jpg',
+            description: ''
+        },{
+            id: 21,
+            name: 'Belachan',
+            unit: '',
+            categoryId: 4,
+            img: 'belachan.jpg',
+            description: ''
+        },{
+            id: 22,
+            name: 'Lemongrass',
+            unit: '',
+            categoryId: 4,
+            img: 'lemongrass.jpg',
+            description: ''
+        },{
+            id: 23,
+            name: 'Ground Coriander',
+            unit: '',
+            categoryId: 4,
+            img: 'groundcoriander.jpg',
+            description: ''
+        },{
+            id: 24,
+            name: 'Pandan',
+            unit: '',
+            categoryId: 4,
+            img: 'pandan.jpg',
+            description: ''
+        },{
+            id: 25,
+            name: 'Kaffir Lime Leave',
+            unit: '',
+            categoryId: 4,
+            img: 'kaffirlimeleave.jpg',
+            description: ''
+        },{
+            id: 26,
+            name: 'Coconut Milk',
+            unit: '',
+            categoryId: 4,
+            img: 'coconutmilk.jpg',
+            description: ''
+        },{
+            id: 27,
+            name: 'Salt',
+            unit: '',
+            categoryId: 4,
+            img: 'salt.jpg',
+            description: ''
+        },{
+            id: 28,
+            name: 'Sugar',
+            unit: '',
+            categoryId: 4,
+            img: 'sugar.jpg',
+            description: ''
+        },{
+            id: 29,
+            name: 'Dijon Mustard',
+            unit: '',
+            categoryId: 4,
+            img: 'dijonmustard.jpg',
+            description: ''
+        },{
+            id: 30,
+            name: 'Olive Oil',
+            unit: '',
+            categoryId: 4,
+            img: 'oliveoil.jpg',
+            description: ''
+        },{
+            id: 31,
+            name: 'Balsamic Vinegar',
+            unit: '',
+            categoryId: 4,
+            img: 'balsamicvinegar.jpg',
+            description: ''
+        },{
+            id: 32,
+            name: 'Light Soy Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'soysauce.jpg',
+            description: ''
+        },{
+            id: 33,
+            name: 'Honey',
+            unit: '',
+            categoryId: 4,
+            img: 'honey.jpg',
+            description: ''
+        },{
+            id: 34,
+            name: 'Tamarind Paste',
+            unit: '',
+            categoryId: 4,
+            img: 'tamarindpaste.jpg',
+            description: ''
+        },{
+            id: 35,
+            name: 'Paprika Powder',
+            unit: '',
+            categoryId: 4,
+            img: 'paprikapowder.jpg',
+            description: ''
+        },{
+            id: 36,
+            name: 'Ground Chilli Pepper',
+            unit: '',
+            categoryId: 4,
+            img: 'groundchillipepper.jpg',
+            description: ''
+        },{
+            id: 37,
+            name: 'Hoisin Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'hoisinsauce.jpg',
+            description: ''
+        },{
+            id: 38,
+            name: 'Dark Soy Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'darksoysauce.jpg',
+            description: ''
+        },{
+            id: 39,
+            name: 'Shaoxing rice wine',
+            unit: '',
+            categoryId: 4,
+            img: 'shaoxingricewine.jpg',
+            description: ''
+        },{
+            id: 40,
+            name: 'Red fermented tofu',
+            unit: '',
+            categoryId: 4,
+            img: 'redfermentedtofu.jpg',
+            description: ''
+        },{
+            id: 41,
+            name: 'Fice Spice Powder',
+            unit: '',
+            categoryId: 4,
+            img: 'fivespicepowder.gif',
+            description: ''
+        },{
+            id: 42,
+            name: 'Sesame oil',
+            unit: '',
+            categoryId: 4,
+            img: 'sesameoil.jpg',
+            description: ''
+        },{
+            id: 43,
+            name: 'Food Coloring Fluid',
+            unit: '',
+            categoryId: 4,
+            img: 'coloringfluid.jpg',
+            description: ''
+        },{
+            id: 44,
+            name: 'Abalone',
+            unit: '',
+            categoryId: 3,
+            img: 'abalone.jpg',
+            description: ''
+        },{
+            id: 45,
+            name: 'Lobster',
+            unit: '',
+            categoryId: 3,
+            img: 'lobster.png',
+            description: ''
+        },{
+            id: 46,
+            name: 'Prawn',
+            unit: '',
+            categoryId: 3,
+            img: 'prawn.jpg',
+            description: ''
+        },{
+            id: 47,
+            name: 'Grouper',
+            unit: '',
+            categoryId: 3,
+            img: 'grouper.jpg',
+            description: ''
+        },{
+            id: 48,
+            name: 'Sea cucumber',
+            unit: '',
+            categoryId: 3,
+            img: 'seacucumber.jpg',
+            description: ''
+        },{
+            id: 49,
+            name: 'Silver perch',
+            unit: '',
+            categoryId: 3,
+            img: 'silverperch.jpg',
+            description: ''
+        },{
+            id: 50,
+            name: 'Salmon',
+            unit: '',
+            categoryId: 3,
+            img: 'salmon.jpg',
+            description: ''
+        },{
+            id: 50,
+            name: 'Mussel',
+            unit: '',
+            categoryId: 3,
+            img: 'mussel.jpg',
+            description: ''
+        },{
+            id: 51,
+            name: 'Stingray',
+            unit: '',
+            categoryId: 3,
+            img: 'stingray.jpg',
+            description: ''
+        },{
+            id: 52,
+            name: 'Tuna',
+            unit: '',
+            categoryId: 3,
+            img: 'tuna.jpg',
+            description: ''
+        },{
+            id: 53,
+            name: 'Crayfish',
+            unit: '',
+            categoryId: 3,
+            img: 'crayfish.jpg',
+            description: ''
+        },{
+            id: 55,
+            name: 'Barramundi',
+            unit: '',
+            categoryId: 3,
+            img: 'barramundi.jpg',
+            description: ''
+        },{
+            id: 56,
+            name: 'Mackerel',
+            unit: '',
+            categoryId: 3,
+            img: 'mackerel.jpg',
+            description: ''
+        },{
+            id: 57,
+            name: 'Squid',
+            unit: '',
+            categoryId: 3,
+            img: 'squid.jpg',
+            description: ''
+        },{
+            id: 58,
+            name: 'Octopus',
+            unit: '',
+            categoryId: 3,
+            img: 'Octopus.jpg',
+            description: ''
+        },{
+            id: 59,
+            name: 'Oyster',
+            unit: '',
+            categoryId: 3,
+            img: 'Oyster.jpg',
+            description: ''
+        },{
+            id: 60,
+            name: 'Clam',
+            unit: '',
+            categoryId: 3,
+            img: 'clam.jpg',
+            description: ''
+        },{
+            id: 61,
+            name: 'Cockle',
+            unit: '',
+            categoryId: 3,
+            img: 'cockle.jpg',
+            description: ''
+        },{
+            id: 62,
+            name: 'Eggplant',
+            unit: '',
+            categoryId: 2,
+            img: 'eggplant.jpg',
+            description: ''
+        },{
+            id: 63,
+            name: 'Chinese Cabbage',
+            unit: '',
+            categoryId: 2,
+            img: 'chinesecabbage.jpg',
+            description: ''
+        },{
+            id: 64,
+            name: 'Beansprout',
+            unit: '',
+            categoryId: 2,
+            img: 'beansprout.jpg',
+            description: ''
+        },{
+            id: 65,
+            name: 'Cucumber',
+            unit: '',
+            categoryId: 2,
+            img: 'cucumber.jpg',
+            description: ''
+        },{
+            id: 66,
+            name: 'Enokitake',
+            unit: '',
+            categoryId: 2,
+            img: 'enokitake.jpg',
+            description: ''
+        },{
+            id: 67,
+            name: 'Broccoli',
+            unit: '',
+            categoryId: 2,
+            img: 'broccoli.jpg',
+            description: ''
+        },{
+            id: 68,
+            name: 'Corn',
+            unit: '',
+            categoryId: 2,
+            img: 'corn.jpg',
+            description: ''
+        },{
+            id: 69,
+            name: 'Pumpkin',
+            unit: '',
+            categoryId: 2,
+            img: 'pumpkin.jpg',
+            description: ''
+        },{
+            id: 70,
+            name: 'Kai-Lan',
+            unit: '',
+            categoryId: 2,
+            img: 'kailan.jpg',
+            description: ''
+        },{
+            id: 71,
+            name: 'Lettuce',
+            unit: '',
+            categoryId: 2,
+            img: 'lettuce.jpg',
+            description: ''
+        },{
+            id: 72,
+            name: 'Spinach',
+            unit: '',
+            categoryId: 2,
+            img: 'spinach.jpg',
+            description: ''
+        },{
+            id: 73,
+            name: 'Tomato',
+            unit: '',
+            categoryId: 2,
+            img: 'tomato.jpg',
+            description: ''
+        },{
+            id: 74,
+            name: 'Pak Choy',
+            unit: '',
+            categoryId: 2,
+            img: 'pakchoy.jpg',
+            description: ''
+        },{
+            id: 75,
+            name: 'Ikan Bilis',
+            unit: '',
+            categoryId: 3,
+            img: 'ikan bilis.jpg',
+            description: ''
+        },{
+            id: 76,
+            name: 'Mutton',
+            unit: '',
+            categoryId: 1,
+            img: 'mutton.jpg',
+            description: ''
+        },{
+            id: 75,
+            name: 'Chicken Drumstick',
+            unit: '',
+            categoryId: 1,
+            img: 'chicken drumstick.jpg',
+            description: ''
+        },{
+            id: 76,
+            name: 'Pork Intestine',
+            unit: '',
+            categoryId: 1,
+            img: 'pork intestine.jpg',
+            description: ''
+        },{
+            id: 77,
+            name: 'Duck',
+            unit: '',
+            categoryId: 1,
+            img: 'duck.jpg',
+            description: ''
+        },{
+            id: 78,
+            name: 'Foiegras',
+            unit: '',
+            categoryId: 1,
+            img: 'foiegras.jpg',
+            description: ''
+        },{
+            id: 79,
+            name: 'Pork rib',
+            unit: '',
+            categoryId: 1,
+            img: 'pork rib.jpg',
+            description: ''
+        },{
+            id: 80,
+            name: 'Chicken Feet',
+            unit: '',
+            categoryId: 1,
+            img: 'chickenfeet.jpg',
+            description: ''
+        },{
+            id: 81,
+            name: 'Pork Belly',
+            unit: '',
+            categoryId: 1,
+            img: 'porkbelly.jpg',
+            description: ''
+        },{
+            id: 82,
+            name: 'Brisket',
+            unit: '',
+            categoryId: 1,
+            img: 'brisket.jpg',
+            description: ''
+        },{
+            id: 83,
+            name: 'Pork Liver',
+            unit: '',
+            categoryId: 1,
+            img: 'pork liver.jpg',
+            description: ''
+        }
     ];
 
     var recipes = [
@@ -138,55 +693,55 @@ app.service('cooKeyService', function ($firebase) {
           isHot: true,
           ingredients: [
               {
-                  id: 1,
+                  id: 2,
                   name: 'mud crabs or soft shelled crabs',
                   quantity: 450,
                   unit: 'g'
               },
               {
-                  id: 2,
+                  id: 7,
                   name: 'plain flour',
                   quantity: 4,
                   unit: 'tbsp'
               },
               {
-                  id: 3,
+                  id: 12,
                   name: 'vegetable oil',
                   quantity: 3,
                   unit: 'tbsp'
               },
               {
-                  id: 4,
+                  id: 9,
                   name: 'cloves garlic, roughly chopped',
                   quantity: 8,
                   unit: ''
               },
               {
-                  id: 5,
+                  id: 1,
                   name: 'fresh red chilli, roughly chopped',
                   quantity: 8,
                   unit: ''
               },
               {
-                  id: 6,
+                  id: 13,
                   name: 'egg',
                   quantity: 1,
                   unit: ''
               },
               {
-                  id: 7,
+                  id: 11,
                   name: 'spring onions (scallions), cut into finger length',
                   quantity: 2,
                   unit: ''
               },
               {
-                  id: 8,
-                  name: 'freshly squeezed lime or lemon juice',
+                  id: 10,
+                  name: 'freshly squeezed lime',
                   quantity: 1,
                   unit: 'tsp'
               },
               {
-                  id: 9,
+                  id: 8,
                   name: 'small bunch coriander plant (cilantro)',
                   quantity: 1,
                   unit: ''
@@ -196,7 +751,7 @@ app.service('cooKeyService', function ($firebase) {
               {
                   sequence: 1,
                   name: 'Mix together for Sauce',
-                  description: '1 cup of water, 5 tbsp tomato catsup, 1 1/2 to 3 tbsp sugar, or according to taste, 1 1/2 tsp cornflour, 1 tsp pounded brown preserved soya beans or dark miso (optional), 1/4 tsp salt',
+                  description: '<b>Mix together for Sauce</b>: 1 cup of water, 5 tbsp tomato catsup, 1 1/2 to 3 tbsp sugar, or according to taste, 1 1/2 tsp cornflour, 1 tsp pounded brown preserved soya beans or dark miso (optional), 1/4 tsp salt',
                   img: '',
               },
               {
@@ -236,44 +791,148 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-          url: '//www.youtube.com/embed/oI3qHUFfyXo'
+          url: 'http://www.youtube.com/embed/oI3qHUFfyXo'
       },
       {
           id: 2,
           name: 'Curry Chicken',
-          dLvl: 'Median',
+          dLvl: 'Medium',
           spicy: 1,
           duration: 35,
           img: 'currychicken1.jpg',
-          description: 'chilli Grab is a traditional singaporean food',
+          description: 'Tasty curry chicken ever!',
           ingredients: [
               {
-                  id: 1,
-                  name: 'chilli',
-                  quantity: 20,
+                  id: 6,
+                  name: 'Whole chicken, cut into 12-14 pieces',
+                  quantity: 1,
+                  unit: 'kg'
+              },
+              {
+                  id: 14,
+                  name: 'Small potatoes, peels and halved',
+                  quantity: 5,
+                  unit: ''
+              },
+              {
+                  id: 15,
+                  name: 'Large onion, peels and cut into wedges',
+                  quantity: 1,
+                  unit: ''
+              },
+              {
+                  id: 16,
+                  name: 'Long dried red chillies, soaked in hot water, drained, coarsely groun',
+                  quantity: 10,
                   unit: 'g'
               },
               {
-                  id: 6,
-                  name: 'chicken',
+                  id: 1,
+                  name: 'Long fresh red chillies, coarsely ground',
                   quantity: 2,
                   unit: ''
+              },
+              {
+                  id: 17,
+                  name: 'Piece fresh tumeric',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 18,
+                  name: 'Piece galangal, sliced',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 19,
+                  name: 'Piece ginger, skinned',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 9,
+                  name: 'Garlic, peeled',
+                  quantity: 3,
+                  unit: 'cloves'
+              },
+              {
+                  id: 20,
+                  name: 'Candlenuts',
+                  quantity: 2,
+                  unit: ''
+              },
+              {
+                  id: 21,
+                  name: 'Balachan, wrapped in foil and toasted in a dry pan until fragrant',
+                  quantity: 1,
+                  unit: 'rounded tbsp'
+              },
+              {
+                  id: 22,
+                  name: 'Lemongrass, white part only',
+                  quantity: 2,
+                  unit: 'stalks'
+              },
+              {
+                  id: 23,
+                  name: 'Ground coriander',
+                  quantity: 2,
+                  unit: 'tbsp'
+              }
+			  ,{
+                  id: 12,
+                  name: 'Oil',
+                  quantity: 1,
+                  unit: ''
+              },{
+                  id: 24,
+                  name: 'Pandan, tied to a knot',
+                  quantity: 1,
+                  unit: ''
+              },{
+                  id: 25,
+                  name: 'Kaffir lime leaf',
+                  quantity: 2,
+                  unit: ''
+              },{
+                  id: 26,
+                  name: 'Coconut milk',
+                  quantity: 2,
+                  unit: 'cups'
+              },{
+                  id: 27,
+                  name: 'Salt',
+                  quantity: 1,
+                  unit: 'tsp'
+              },{
+                  id: 28,
+                  name: 'Sugar',
+                  quantity: '1/2',
+                  unit: 'tsp'
               }
           ],
           steps: [
               {
                   sequence: 1,
                   name: 'prepare',
-                  description: 'clean your dishes <a href="#/recipe/1">chilli crab</a>',
+                  description: 'In a blender or mortar and pestle, grind onion, chillies, tumeric, galangal, ginger, garlic, candlenuts and balachan to a paste. (The paste is called Rempah)',
                   img: '',
               },
               {
                   sequence: 2,
                   name: 'cook',
-                  description: 'cook your dishes',
+                  description: 'Heat 4 tbsp of oil in a large pot, add the rempah and lemongrass and cook on medium heat until fragrant. Add the ground coriander and cook for a further 5 minutes.',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'cook',
+                  description: 'Add chicken pieces, pandan and kaffir lime leaves. Stir until well coated, then add the potatoes and coconut milk, stir well and cook until both chicken and potatoes are cooked and tender. Season with salt and sugar. Be careful not to break up the potatoes when stirring.',
                   img: '',
               }
-          ]
+          ],
+		  url: 'N/A'
       },
       {
           id: 3,
@@ -311,7 +970,277 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ]
+      },
+      {
+          id: 4,
+          name: 'Beef Steak',
+          dLvl: 'Medium',
+          spicy: 0,
+          duration: 15,
+          img: 'beefsteak.png',
+          description: 'Beef Steak',
+          ingredients: [
+              {
+                  id: 5,
+                  name: 'Beefsteak',
+                  quantity: 2,
+                  unit: 'lbs'
+              },
+              {
+                  id: 9,
+                  name: 'Garlic Cloves',
+                  quantity: 4,
+                  unit: ''
+              },
+              {
+                  id: 29,
+                  name: 'Dijon Mustard',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 30,
+                  name: 'Olive Oil',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 31,
+                  name: 'Balsamic Vinegar',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 32,
+                  name: 'Soy Sauce',
+                  quantity: 3,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 27,
+                  name: 'Salt',
+                  quantity: '1/4',
+                  unit: 'tsp'
+              },
+              {
+                  id: 33,
+                  name: 'Honey',
+                  quantity: 1,
+                  unit: 'tsp'
+              },
+              {
+                  id: 34,
+                  name: 'Tamarind Paste',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 35,
+                  name: 'Paprika',
+                  quantity: 1,
+                  unit: ''
+              },
+              {
+                  id: 36,
+                  name: 'Ground Chilli Pepper',
+                  quantity: 1,
+                  unit: ''
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'Dissolve 2 ounces of tamarind in 1/4 cup of boiling water, stir until thoroughly dissolved.',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'prepare',
+                  description: 'Pass the mixture through a strainer.',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'direction',
+                  description: 'Mash garlic cloves into a small bowl.',
+                  img: '',
+              },
+              {
+                  sequence: 4,
+                  name: 'direction',
+                  description: 'Add dijon mustard, olive oil, balsamic vinegar, soy sauce, paprika as preferred, salt, ground chili pepper, honey, and mix thoroughly.',
+                  img: '',
+              },
+              {
+                  sequence: 5,
+                  name: 'direction',
+                  description: 'Add the tamarind paste and stir to combine until well blended.',
+                  img: '',
+              },
+              {
+                  sequence: 6,
+                  name: 'direction',
+                  description: 'Pour the mixture into a plastic bag with zip lock.',
+                  img: '',
+              },
+              {
+                  sequence: 7,
+                  name: 'direction',
+                  description: 'Place the beefsteaks into the plastic bag and zip/seal tight.',
+                  img: '',
+              },
+              {
+                  sequence: 8,
+                  name: 'direction',
+                  description: 'Rub and spread the mixture across the beef surface evenly.',
+                  img: '',
+              },
+              {
+                  sequence: 9,
+                  name: 'direction',
+                  description: 'Marinate the beef overnight or at least for 8 hours, keep in a refrigerator.',
+                  img: '',
+              },
+              {
+                  sequence: 10,
+                  name: 'direction',
+                  description: 'Spray a grill pan with cooking spray.',
+                  img: '',
+              },
+              {
+                  sequence: 11,
+                  name: 'direction',
+                  description: 'Grill the steaks, flip the steak over so both sides get cooked thoroughly.',
+                  img: '',
+              },
+              {
+                  sequence: 12,
+                  name: 'direction',
+                  description: 'For medium rare, bring the interior temperature to 135º to 145º F (57º to 63º C), or for well done 160º to 212º F (71º to 100º C).',
+                  img: '',
+              }
+          ],
+		  url: 'http://www.youtube.com/embed/VioFJSm6zI0'
+      },
+	  {
+          id: 5,
+          name: 'Char Siew - Chinese Barbecued Pork',
+          dLvl: 'Medium',
+          spicy: 0,
+          duration: '8hrs',
+          img: 'charsiew.jpg',
+          description: 'This is the best recipe to make Char siu, so check it out.',
+          ingredients: [
+              {
+                  id: 3,
+                  name: 'Sliced pork',
+                  quantity: 500,
+                  unit: 'g'
+              },
+              {
+                  id: 9,
+                  name: 'Cloves of garlic ',
+                  quantity: 5,
+                  unit: 'grated'
+              },
+              {
+                  id: 19,
+                  name: 'Grated ginger ',
+                  quantity: 5,
+                  unit: 'cm'
+              },
+              {
+                  id: 33,
+                  name: 'Honey ',
+                  quantity: 4,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 37,
+                  name: 'Hoisin Sauce ',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 32,
+                  name: 'Light soy sauce',
+                  quantity: 5,
+                  unit: 'grated'
+              },
+              {
+                  id: 38,
+                  name: 'Dark Soy Sauce',
+                  quantity: 1,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 39,
+                  name: 'Shaoxing rice wine',
+                  quantity: 1,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 40,
+                  name: 'Red fermented tofu',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 41,
+                  name: 'Five spice powder',
+                  quantity: 1,
+                  unit: 'tsp'
+				  }
+              ,
+              {
+                  id: 42,
+                  name: 'Sesame oil',
+                  quantity: 1,
+                  unit: 'tsp'
+              },
+              {
+                  id: 43,
+                  name: 'Food Coloring Fluid',
+                  quantity: 1,
+                  unit: 'tsp'
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'Mix the ingredient',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'cook',
+                  description: 'Marinate the pork for 6 hours in the fridge With 3/4 of the marinate',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'cook',
+                  description: 'Roast the pork next to the fire for 15 minutes (add a wood chunk for extra smoke flavour)',
+                  img: '',
+              },
+              {
+                  sequence: 4,
+                  name: 'cook',
+                  description: 'Roast the pork for 15 over the fire',
+                  img: '',
+              },
+              {
+                  sequence: 5,
+                  name: 'cook',
+                  description: 'Mob the pork with the marinate in the last 5 minutes',
+                  img: '',
+              }
+          ],
+		  url:'http://www.youtube.com/embed/wX95BQ0VfoY'
       }
+      
     ];
 
     var previousArticles = [

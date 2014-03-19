@@ -16,7 +16,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h3>Ingredients</h3>
+        <h3 style="margin-left:5px;">Ingredients</h3>
         <table class="table">
             <tr>
                 <th>Name</th>
@@ -31,9 +31,10 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h3>Steps</h3>
+        <h3 style="margin-left:5px;">Steps</h3>
         <table class="table">
             <tr ng-repeat="step in recipe.steps">
+				<td>{{$index+1}}</td>
                 <td ><span ng-bind-html="step.description" ></span></td>
                 <td><img src="img/{{step.img}}" alt="" /></td>
             </tr>
@@ -41,4 +42,10 @@
     </div>
 	
 </div>
-<embed width="420" height="345" src="//www.youtube.com/embed/oI3qHUFfyXo" type="application/x-shockwave-flash"></embed>
+<div class="row">
+    <div class="col-xs-12">
+        <h3 style="margin-left:5px;">Video</h3><hr style="margin-top:-10px;">
+			<a href="{{recipe.url}}" style="margin-left:5px; margin-top:-10px;">{{recipe.url}}</a>
+    </div>
+	
+</div>
