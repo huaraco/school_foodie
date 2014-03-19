@@ -4,8 +4,12 @@ app.controller('rootController', function ($scope, $location) {
     $scope.range = function (n) {
         return _.range(n);
     };
+    $scope.getLocation = function() {
+        return $location.path();
+    }
 
     $scope.getClass = function (path) {
+    
         if ($location.path().substr(0, path.length) == path) {
             return true
         } else {
@@ -15,8 +19,6 @@ app.controller('rootController', function ($scope, $location) {
 
     $scope.diyIngredients = [];
 
-    
-    
 });
 
 app.controller('recipeController', function ($scope, cooKeyService) {
@@ -98,7 +100,10 @@ app.controller('careDetailController', function ($scope, $routeParams, cooKeySer
 });
 
 app.controller('promotionController', function ($scope, $firebase, cooKeyService) {
+    $scope.$parent.searchKeyWord = '';
+    $scope.location = true;
     $scope.stores = cooKeyService.getPromotions();
+    console.log($scope.stores);
 });
 
 app.controller('promotionListController', function ($scope, $routeParams, cooKeyService,$firebase) {

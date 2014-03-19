@@ -110,15 +110,25 @@ input.holo[type='text'] {
     padding: 0px;
     margin: 6px;
     height: 100px;
-    width: 100px;
+    width: 97px;
     overflow: hidden;
     text-align: center;
+}
+.ingredientList .frame {
+    width: 95px;
+    height: 70px;
+    overflow: hidden;    
+}
+
+.ingredientList img {
+    width: 95px;
+    height: 70px;
 }
 
 .ingredientList span {
     display: inline-block;
     
-    width: 100px;
+    width: 97px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
