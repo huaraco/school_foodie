@@ -141,14 +141,14 @@ app.service('cooKeyService', function ($firebase) {
             id: 9,
             name: 'Garlic',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'garlic.jpg',
             description: ''
         },{
             id: 10,
             name: 'Lime',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'lime.jpg',
             description: ''
         },{
@@ -199,14 +199,14 @@ app.service('cooKeyService', function ($firebase) {
             id: 17,
             name: 'Tumeric',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'tumeric.jpg',
             description: ''
         },{
             id: 18,
             name: 'Galangal',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'galangal.jpg',
             description: ''
         },{
@@ -220,49 +220,49 @@ app.service('cooKeyService', function ($firebase) {
             id: 20,
             name: 'Candlenut',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'candlenut.jpg',
             description: ''
         },{
             id: 21,
             name: 'Belachan',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'belachan.jpg',
             description: ''
         },{
             id: 22,
             name: 'Lemongrass',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'lemongrass.jpg',
             description: ''
         },{
             id: 23,
             name: 'Ground Coriander',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'groundcoriander.jpg',
             description: ''
         },{
             id: 24,
             name: 'Pandan',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'pandan.jpg',
             description: ''
         },{
             id: 25,
             name: 'Kaffir Lime Leave',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'kaffirlimeleave.jpg',
             description: ''
         },{
             id: 26,
             name: 'Coconut Milk',
             unit: '',
-            categoryId: 2,
+            categoryId: 4,
             img: 'coconutmilk.jpg',
             description: ''
         },{
@@ -271,6 +271,69 @@ app.service('cooKeyService', function ($firebase) {
             unit: '',
             categoryId: 4,
             img: 'salt.jpg',
+            description: ''
+        },{
+            id: 28,
+            name: 'Sugar',
+            unit: '',
+            categoryId: 4,
+            img: 'sugar.jpg',
+            description: ''
+        },{
+            id: 29,
+            name: 'Dijon Mustard',
+            unit: '',
+            categoryId: 4,
+            img: 'dijonmustard.jpg',
+            description: ''
+        },{
+            id: 30,
+            name: 'Olive Oil',
+            unit: '',
+            categoryId: 4,
+            img: 'oliveoil.jpg',
+            description: ''
+        },{
+            id: 31,
+            name: 'Balsamic Vinegar',
+            unit: '',
+            categoryId: 4,
+            img: 'balsamicvinegar.jpg',
+            description: ''
+        },{
+            id: 32,
+            name: 'Soy Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'soysauce.jpg',
+            description: ''
+        },{
+            id: 33,
+            name: 'Honey',
+            unit: '',
+            categoryId: 4,
+            img: 'honey.jpg',
+            description: ''
+        },{
+            id: 34,
+            name: 'Tamarind Paste',
+            unit: '',
+            categoryId: 4,
+            img: 'tamarindpaste.jpg',
+            description: ''
+        },{
+            id: 35,
+            name: 'Paprika Powder',
+            unit: '',
+            categoryId: 4,
+            img: 'paprikapowder.jpg',
+            description: ''
+        },{
+            id: 36,
+            name: 'Ground Chilli Pepper',
+            unit: '',
+            categoryId: 4,
+            img: 'groundchillipepper.jpg',
             description: ''
         }
     ];
@@ -390,7 +453,7 @@ app.service('cooKeyService', function ($firebase) {
       {
           id: 2,
           name: 'Curry Chicken',
-          dLvl: 'Median',
+          dLvl: 'Medium',
           spicy: 1,
           duration: 35,
           img: 'currychicken1.jpg',
@@ -564,6 +627,158 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ]
+      },
+      {
+          id: 4,
+          name: 'Beef Steak',
+          dLvl: 'Medium',
+          spicy: 0,
+          duration: 15,
+          img: 'beefsteak.png',
+          description: 'Beef Steak',
+          ingredients: [
+              {
+                  id: 5,
+                  name: 'Beefsteak',
+                  quantity: 2,
+                  unit: 'lbs'
+              },
+              {
+                  id: 9,
+                  name: 'Garlic Cloves',
+                  quantity: 4,
+                  unit: ''
+              },
+              {
+                  id: 29,
+                  name: 'Dijon Mustard',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 30,
+                  name: 'Olive Oil',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 31,
+                  name: 'Balsamic Vinegar',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 32,
+                  name: 'Soy Sauce',
+                  quantity: 3,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 27,
+                  name: 'Salt',
+                  quantity: '1/4',
+                  unit: 'tsp'
+              },
+              {
+                  id: 33,
+                  name: 'Honey',
+                  quantity: 1,
+                  unit: 'tsp'
+              },
+              {
+                  id: 34,
+                  name: 'Tamarind Paste',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 35,
+                  name: 'Paprika',
+                  quantity: 1,
+                  unit: ''
+              },
+              {
+                  id: 36,
+                  name: 'Ground Chilli Pepper',
+                  quantity: 1,
+                  unit: ''
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'Dissolve 2 ounces of tamarind in 1/4 cup of boiling water, stir until thoroughly dissolved.',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'prepare',
+                  description: 'Pass the mixture through a strainer.',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'direction',
+                  description: 'Mash garlic cloves into a small bowl.',
+                  img: '',
+              },
+              {
+                  sequence: 4,
+                  name: 'direction',
+                  description: 'Add dijon mustard, olive oil, balsamic vinegar, soy sauce, paprika as preferred, salt, ground chili pepper, honey, and mix thoroughly.',
+                  img: '',
+              },
+              {
+                  sequence: 5,
+                  name: 'direction',
+                  description: 'Add the tamarind paste and stir to combine until well blended.',
+                  img: '',
+              },
+              {
+                  sequence: 6,
+                  name: 'direction',
+                  description: 'Pour the mixture into a plastic bag with zip lock.',
+                  img: '',
+              },
+              {
+                  sequence: 7,
+                  name: 'direction',
+                  description: 'Place the beefsteaks into the plastic bag and zip/seal tight.',
+                  img: '',
+              },
+              {
+                  sequence: 8,
+                  name: 'direction',
+                  description: 'Rub and spread the mixture across the beef surface evenly.',
+                  img: '',
+              },
+              {
+                  sequence: 9,
+                  name: 'direction',
+                  description: 'Marinate the beef overnight or at least for 8 hours, keep in a refrigerator.',
+                  img: '',
+              },
+              {
+                  sequence: 10,
+                  name: 'direction',
+                  description: 'Spray a grill pan with cooking spray.',
+                  img: '',
+              },
+              {
+                  sequence: 11,
+                  name: 'direction',
+                  description: 'Grill the steaks, flip the steak over so both sides get cooked thoroughly.',
+                  img: '',
+              },
+              {
+                  sequence: 12,
+                  name: 'direction',
+                  description: 'For medium rare, bring the interior temperature to 135º to 145º F (57º to 63º C), or for well done 160º to 212º F (71º to 100º C).',
+                  img: '',
+              }
+          ],
+		  url: 'http://www.youtube.com/watch?v=VioFJSm6zI0'
       }
     ];
 
