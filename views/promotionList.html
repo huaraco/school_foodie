@@ -4,23 +4,27 @@
             <div class="panel panel-default">
               <div class="panel-body">
                     <div class="row">
-                        <div class="col-xs-4" style="padding: 0 5px;">
+                        <div class="col-xs-4" style="padding: 0 5px;overflow:hidden;height:80px;">
                                 <img src="img/{{promotion.img}}" />
                         </div>
                         <div class="col-xs-8">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    {{promotion.name}}                
+                                    <h4 style="margin:0 20px 0 0;">{{promotion.name}}</h4>                
                                     <img src="img/hot.png"  class="hotIcon">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="label label-primary">Promotion Price: {{promotion.promotionPrice}}</span>
+                                    <h3 style="color:red; font-size:20px;margin:0 20px -20px 0">${{promotion.promotionPrice}}</h3>
 									<br>
-                                    <span class="label label-warning">
-                                        Usual price: {{promotion.origPrice}}
-                                    </span>        
+                                    <span style="font-size:12px;">
+                                        U.P: ${{promotion.origPrice}}
+                                    </span>
+									<br>
+									<span style="font-size:14px;font-family:'GoodDog New';">
+										Valid Till: {{promotion.validtill}}
+									</span>
                                 </div>    
                             </div>
                             
