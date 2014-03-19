@@ -4,8 +4,14 @@ body {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+h3 {
+	font-family:"Stencil";
+}
 
-
+h4{
+	font-family:"Iskra";
+	font-weight:"bold";
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
