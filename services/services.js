@@ -302,7 +302,7 @@ app.service('cooKeyService', function ($firebase) {
             description: ''
         },{
             id: 32,
-            name: 'Soy Sauce',
+            name: 'Light Soy Sauce',
             unit: '',
             categoryId: 4,
             img: 'soysauce.jpg',
@@ -334,6 +334,55 @@ app.service('cooKeyService', function ($firebase) {
             unit: '',
             categoryId: 4,
             img: 'groundchillipepper.jpg',
+            description: ''
+        },{
+            id: 37,
+            name: 'Hoisin Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'hoisinsauce.jpg',
+            description: ''
+        },{
+            id: 38,
+            name: 'Dark Soy Sauce',
+            unit: '',
+            categoryId: 4,
+            img: 'darksoysauce.jpg',
+            description: ''
+        },{
+            id: 39,
+            name: 'Shaoxing rice wine',
+            unit: '',
+            categoryId: 4,
+            img: 'shaoxingricewine.jpg',
+            description: ''
+        },{
+            id: 40,
+            name: 'Red fermented tofu',
+            unit: '',
+            categoryId: 4,
+            img: 'redfermentedtofu.jpg',
+            description: ''
+        },{
+            id: 41,
+            name: 'Fice Spice Powder',
+            unit: '',
+            categoryId: 4,
+            img: 'fivespicepowder.gif',
+            description: ''
+        },{
+            id: 42,
+            name: 'Sesame oil',
+            unit: '',
+            categoryId: 4,
+            img: 'sesameoil.jpg',
+            description: ''
+        },{
+            id: 43,
+            name: 'Food Coloring Fluid',
+            unit: '',
+            categoryId: 4,
+            img: 'coloringfluid.jpg',
             description: ''
         }
     ];
@@ -778,8 +827,126 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-		  url: 'http://www.youtube.com/watch?v=VioFJSm6zI0'
+		  url: 'http://www.youtube.com/embed/VioFJSm6zI0'
+      },
+	  {
+          id: 5,
+          name: 'Char Siew - Chinese Barbecued Pork',
+          dLvl: 'Medium',
+          spicy: 0,
+          duration: '8hrs',
+          img: 'charsiew.jpg',
+          description: 'This is the best recipe to make Char siu, so check it out.',
+          ingredients: [
+              {
+                  id: 3,
+                  name: 'Sliced pork',
+                  quantity: 500,
+                  unit: 'g'
+              },
+              {
+                  id: 9,
+                  name: 'Cloves of garlic ',
+                  quantity: 5,
+                  unit: 'grated'
+              },
+              {
+                  id: 19,
+                  name: 'Grated ginger ',
+                  quantity: 5,
+                  unit: 'cm'
+              },
+              {
+                  id: 33,
+                  name: 'Honey ',
+                  quantity: 4,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 37,
+                  name: 'Hoisin Sauce ',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 32,
+                  name: 'Light soy sauce',
+                  quantity: 5,
+                  unit: 'grated'
+              },
+              {
+                  id: 38,
+                  name: 'Dark Soy Sauce',
+                  quantity: 1,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 39,
+                  name: 'Shaoxing rice wine',
+                  quantity: 1,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 40,
+                  name: 'Red fermented tofu',
+                  quantity: 2,
+                  unit: 'tbsp'
+              },
+              {
+                  id: 41,
+                  name: 'Five spice powder',
+                  quantity: 1,
+                  unit: 'tsp'
+				  }
+              ,
+              {
+                  id: 42,
+                  name: 'Sesame oil',
+                  quantity: 1,
+                  unit: 'tsp'
+              },
+              {
+                  id: 43,
+                  name: 'Food Coloring Fluid',
+                  quantity: 1,
+                  unit: 'tsp'
+              }
+          ],
+          steps: [
+              {
+                  sequence: 1,
+                  name: 'prepare',
+                  description: 'Mix the ingredient',
+                  img: '',
+              },
+              {
+                  sequence: 2,
+                  name: 'cook',
+                  description: 'Marinate the pork for 6 hours in the fridge With 3/4 of the marinate',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'cook',
+                  description: 'Roast the pork next to the fire for 15 minutes (add a wood chunk for extra smoke flavour)',
+                  img: '',
+              },
+              {
+                  sequence: 4,
+                  name: 'cook',
+                  description: 'Roast the pork for 15 over the fire',
+                  img: '',
+              },
+              {
+                  sequence: 5,
+                  name: 'cook',
+                  description: 'Mob the pork with the marinate in the last 5 minutes',
+                  img: '',
+              }
+          ],
+		  url:'http://www.youtube.com/embed/wX95BQ0VfoY'
       }
+      
     ];
 
     var previousArticles = [
