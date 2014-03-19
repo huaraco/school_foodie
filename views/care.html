@@ -3,33 +3,45 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div>
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <!--<ol class="carousel-indicators">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                        </ol>
+                        </ol>-->
 
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
+                        <carousel interval="3000">
+                            <slide ng-repeat="featuredArticle in featuredArticles" active="slide.active">
+                                <div style="height:150px; overflow: hidden; vertical-align:middle;">
+                                    <img ng-src="img/{{featuredArticle.img}}" style="margin:auto;">    
+                                </div>
+                                
+                                <div class="carousel-caption">
+                                    <h4>Slide {{$index}}</h4>
+                                    <p>{{featuredArticle.name}}</p>
+                                </div>
+                            </slide>
+                        </carousel>
+                        <!--<div class="carousel-inner">
                             <div class="item" ng-repeat="featuredArticle in featuredArticles" ng-class="{active : $first}">
                                 <img src="img/{{featuredArticle.img}}" class="img-responsive center-block" alt="{{featuredArticle.id}}">
                                 <div class="carousel-caption">
                                     <b>{{featuredArticle.name}}</b>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                    </div>
+                        </a>-->
+                    <!--</div>-->
                 </div>
 
                 <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">

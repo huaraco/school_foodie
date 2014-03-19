@@ -26,17 +26,20 @@
 </div>
 
 <div ng-hide="ingredientSearch != '' ">
-    <div class="ingredientList row">
-        <div class="col-xs-12 well" style="margin:20px;">
-            <ul class="list-inline">
-                <li ng-repeat="ingre in specialIngredients" class="text-center">
-                    <a href="#/ingredient/{{ingre.id}}">
-                        <img src="img/{{ingre.img}}" class="thumbnail" style="height:70px;" />
-                        <span>{{ingre.name}}</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="container">
+        <carousel interval="3000">
+            <slide ng-repeat="Ingre in specialIngredients" active="slide.active">
+                <div style="height:150px; overflow: hidden; vertical-align:middle;">
+                    <img ng-src="img/{{Ingre.img}}" style="margin:auto;">
+                </div>
+
+                <div class="carousel-caption">
+                    <h4>Slide {{$index}}</h4>
+                    <p>{{Ingre.name}}</p>
+                </div>
+            </slide>
+        </carousel>    
     </div>
+    
 </div>
 
