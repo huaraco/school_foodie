@@ -1,5 +1,20 @@
 var app = angular.module('cooKeyApp', ['ngRoute', 'firebase', 'ngSanitize', 'ui.bootstrap']);
 
+app.directive('backButton', function () {
+    return {
+        restrict: 'A',
+
+        link: function (scope, element, attrs) {
+            element.bind('click', goBack);
+
+            function goBack() {
+                history.back();
+                scope.$apply();
+            }
+        }
+    }
+});
+
 //This configures the routes and associates each route with a view and a controller
 app.config(function ($routeProvider) {
     $routeProvider

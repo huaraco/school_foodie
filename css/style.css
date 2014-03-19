@@ -46,7 +46,7 @@ h4{
         background: #ff8533;
     }
 
-    #bottomNav div {
+    #bottomNav div, #bottomNav li {
         padding: 10px 0px;
     }
 
@@ -60,6 +60,34 @@ h4{
             color: #fff;
         }
 
+#bottomNav2 {
+    padding: 0px -20px;
+    margin: 0 -20px;
+}
+
+    #bottomNav2 .active {
+        background: #ff8533;
+    }
+
+    #bottomNav2 div{
+        width: 65px;
+        padding: 10px 2px;
+    }
+
+    #bottomNav2 li{
+        
+        padding: 2px;
+    }
+
+    #bottomNav2 a {
+        font-size: 10pt;
+        color: #ddd;
+        text-decoration: none;
+    }
+
+        #bottomNav2 a:hover {
+            color: #fff;
+        }
 
 .hotIcon {
     position: absolute;
@@ -138,4 +166,8 @@ input.holo[type='text'] {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.carousel-indicators {
+    display: none;
 }
