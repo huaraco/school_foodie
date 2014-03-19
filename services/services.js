@@ -426,6 +426,258 @@ app.service('cooKeyService', function ($firebase) {
             categoryId: 3,
             img: 'silverperch.jpg',
             description: ''
+        },{
+            id: 50,
+            name: 'Salmon',
+            unit: '',
+            categoryId: 3,
+            img: 'salmon.jpg',
+            description: ''
+        },{
+            id: 50,
+            name: 'Mussel',
+            unit: '',
+            categoryId: 3,
+            img: 'mussel.jpg',
+            description: ''
+        },{
+            id: 51,
+            name: 'Stingray',
+            unit: '',
+            categoryId: 3,
+            img: 'stingray.jpg',
+            description: ''
+        },{
+            id: 52,
+            name: 'Tuna',
+            unit: '',
+            categoryId: 3,
+            img: 'tuna.jpg',
+            description: ''
+        },{
+            id: 53,
+            name: 'Crayfish',
+            unit: '',
+            categoryId: 3,
+            img: 'crayfish.jpg',
+            description: ''
+        },{
+            id: 55,
+            name: 'Barramundi',
+            unit: '',
+            categoryId: 3,
+            img: 'barramundi.jpg',
+            description: ''
+        },{
+            id: 56,
+            name: 'Mackerel',
+            unit: '',
+            categoryId: 3,
+            img: 'mackerel.jpg',
+            description: ''
+        },{
+            id: 57,
+            name: 'Squid',
+            unit: '',
+            categoryId: 3,
+            img: 'squid.jpg',
+            description: ''
+        },{
+            id: 58,
+            name: 'Octopus',
+            unit: '',
+            categoryId: 3,
+            img: 'Octopus.jpg',
+            description: ''
+        },{
+            id: 59,
+            name: 'Oyster',
+            unit: '',
+            categoryId: 3,
+            img: 'Oyster.jpg',
+            description: ''
+        },{
+            id: 60,
+            name: 'Clam',
+            unit: '',
+            categoryId: 3,
+            img: 'clam.jpg',
+            description: ''
+        },{
+            id: 61,
+            name: 'Cockle',
+            unit: '',
+            categoryId: 3,
+            img: 'cockle.jpg',
+            description: ''
+        },{
+            id: 62,
+            name: 'Eggplant',
+            unit: '',
+            categoryId: 2,
+            img: 'eggplant.jpg',
+            description: ''
+        },{
+            id: 63,
+            name: 'Chinese Cabbage',
+            unit: '',
+            categoryId: 2,
+            img: 'chinesecabbage.jpg',
+            description: ''
+        },{
+            id: 64,
+            name: 'Beansprout',
+            unit: '',
+            categoryId: 2,
+            img: 'beansprout.jpg',
+            description: ''
+        },{
+            id: 65,
+            name: 'Cucumber',
+            unit: '',
+            categoryId: 2,
+            img: 'cucumber.jpg',
+            description: ''
+        },{
+            id: 66,
+            name: 'Enokitake',
+            unit: '',
+            categoryId: 2,
+            img: 'enokitake.jpg',
+            description: ''
+        },{
+            id: 67,
+            name: 'Broccoli',
+            unit: '',
+            categoryId: 2,
+            img: 'broccoli.jpg',
+            description: ''
+        },{
+            id: 68,
+            name: 'Corn',
+            unit: '',
+            categoryId: 2,
+            img: 'corn.jpg',
+            description: ''
+        },{
+            id: 69,
+            name: 'Pumpkin',
+            unit: '',
+            categoryId: 2,
+            img: 'pumpkin.jpg',
+            description: ''
+        },{
+            id: 70,
+            name: 'Kai-Lan',
+            unit: '',
+            categoryId: 2,
+            img: 'kailan.jpg',
+            description: ''
+        },{
+            id: 71,
+            name: 'Lettuce',
+            unit: '',
+            categoryId: 2,
+            img: 'lettuce.jpg',
+            description: ''
+        },{
+            id: 72,
+            name: 'Spinach',
+            unit: '',
+            categoryId: 2,
+            img: 'spinach.jpg',
+            description: ''
+        },{
+            id: 73,
+            name: 'Tomato',
+            unit: '',
+            categoryId: 2,
+            img: 'tomato.jpg',
+            description: ''
+        },{
+            id: 74,
+            name: 'Pak Choy',
+            unit: '',
+            categoryId: 2,
+            img: 'pakchoy.jpg',
+            description: ''
+        },{
+            id: 75,
+            name: 'Ikan Bilis',
+            unit: '',
+            categoryId: 3,
+            img: 'ikan bilis.jpg',
+            description: ''
+        },{
+            id: 76,
+            name: 'Mutton',
+            unit: '',
+            categoryId: 1,
+            img: 'mutton.jpg',
+            description: ''
+        },{
+            id: 75,
+            name: 'Chicken Drumstick',
+            unit: '',
+            categoryId: 1,
+            img: 'chicken drumstick.jpg',
+            description: ''
+        },{
+            id: 76,
+            name: 'Pork Intestine',
+            unit: '',
+            categoryId: 1,
+            img: 'pork intestine.jpg',
+            description: ''
+        },{
+            id: 77,
+            name: 'Duck',
+            unit: '',
+            categoryId: 1,
+            img: 'duck.jpg',
+            description: ''
+        },{
+            id: 78,
+            name: 'Foiegras',
+            unit: '',
+            categoryId: 1,
+            img: 'foiegras.jpg',
+            description: ''
+        },{
+            id: 79,
+            name: 'Pork rib',
+            unit: '',
+            categoryId: 1,
+            img: 'pork rib.jpg',
+            description: ''
+        },{
+            id: 80,
+            name: 'Chicken Feet',
+            unit: '',
+            categoryId: 1,
+            img: 'chickenfeet.jpg',
+            description: ''
+        },{
+            id: 81,
+            name: 'Pork Belly',
+            unit: '',
+            categoryId: 1,
+            img: 'porkbelly.jpg',
+            description: ''
+        },{
+            id: 82,
+            name: 'Brisket',
+            unit: '',
+            categoryId: 1,
+            img: 'brisket.jpg',
+            description: ''
+        },{
+            id: 83,
+            name: 'Pork Liver',
+            unit: '',
+            categoryId: 1,
+            img: 'pork liver.jpg',
+            description: ''
         }
     ];
 
