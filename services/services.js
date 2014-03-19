@@ -384,6 +384,34 @@ app.service('cooKeyService', function ($firebase) {
             categoryId: 4,
             img: 'coloringfluid.jpg',
             description: ''
+        },{
+            id: 44,
+            name: 'Abalone',
+            unit: '',
+            categoryId: 3,
+            img: 'abalone.jpg',
+            description: ''
+        },{
+            id: 45,
+            name: 'Lobster',
+            unit: '',
+            categoryId: 3,
+            img: 'lobster.png',
+            description: ''
+        },{
+            id: 46,
+            name: 'Prawn',
+            unit: '',
+            categoryId: 3,
+            img: 'prawn.jpg',
+            description: ''
+        },{
+            id: 47,
+            name: 'Grouper',
+            unit: '',
+            categoryId: 3,
+            img: 'grouper.jpg',
+            description: ''
         }
     ];
 
