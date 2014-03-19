@@ -19,13 +19,18 @@
       <![endif]-->
 </head>
 <body ng-controller="rootController">
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header" style="float:left; width:100%;">
                 <form class="navbar-form navbar-right" role="search" style="float:right; margin: 0 -15px;">
                     <div class="form-group form-inline inline-group">
                         <input type="text" class="holo" placeholder="Search" ng-model="searchKeyWord" style="width:150px; float:left;">
-
+                        <div class="label label-warning" 
+                             style="margin-left: 15px; margin-top:7px; float:left; padding: 5px 10px;"
+                             ng-show="getLocation()=='/promotion'">
+                            <span class="glyphicon glyphicon-map-marker" />
+                        </div>
                     </div>
 
                 </form>
@@ -39,8 +44,8 @@
 
 
     <div ng-view>
-		<div style="margin:auto;" id="spinner"></div>
-	</div>
+        <div style="margin:auto;" id="spinner"></div>
+    </div>
 
 
 
@@ -85,7 +90,7 @@
 
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
-    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>

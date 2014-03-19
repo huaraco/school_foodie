@@ -32,13 +32,16 @@ app.service('cooKeyService', function ($firebase) {
     };
 
     this.getPromotions = function () {
-        var storeRef = new Firebase("https://is306cookey.firebaseio.com/Store");
-        return $firebase(storeRef);
+        return stores;
+        //var storeRef = new Firebase("https://is306cookey.firebaseio.com/Store");
+        //return $firebase(storeRef);
     }
 
     this.getStore = function (stroeId) {
-        var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/" + stroeId + "/promotion");
-        return $firebase(promotionRef);
+        var store = _.findWhere(stores, { id: stroeId });
+        return store.promotion;
+        //var promotionRef = new Firebase("https://is306cookey.firebaseio.com/Store/" + stroeId + "/promotion");
+        //return $firebase(promotionRef);
     }
 
     this.getIngredient = function (id) {
@@ -463,6 +466,403 @@ app.service('cooKeyService', function ($firebase) {
          date: '01/07/2013',
          tag: 'Beef'
      }
+    ];
+
+    var stores =  
+    [
+        {
+            "id": 1,
+            "postal": 768545,
+            "name": "Cold Storage",
+            "promotion": [
+                {
+                    "origPrice": "1 for 3",
+                    "isHot": true,
+                    "name": "Choy Sum",
+                    "promotionPrice": "0.59 for 3",
+                    "validtill": "31 Mar 2014",
+                    "img": "choysum.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "name": "Carrot",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "carrot.jpg"
+                }, {
+                    "origPrice": "2 per kg",
+                    "isHot": true,
+                    "name": "Pork",
+                    "promotionPrice": "1.59 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "pork.jpg"
+                }, {
+                    "origPrice": "1 per 500g",
+                    "isHot": false,
+                    "name": "Cabbage",
+                    "promotionPrice": "0.59 per 500g",
+                    "validtill": "31 Mar 2014",
+                    "img": "cabbage.jpg"
+                }, {
+                    "origPrice": "1 per 100g",
+                    "isHot": false,
+                    "name": "Eggplant",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "eggplant.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Potato",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "potato.jpg"
+                }, {
+                    "origPrice": "5 per pack",
+                    "isHot": false,
+                    "name": "Egg",
+                    "promotionPrice": "3.99 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "egg.jpg"
+                }, {
+                    "origPrice": "10 per kg",
+                    "isHot": false,
+                    "name": "Prawn",
+                    "promotionPrice": "7.99 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "prawn.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Salmon",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "salmon.jpg"
+                }, {
+                    "origPrice": "0.7 per pack",
+                    "isHot": false,
+                    "name": "Tofu",
+                    "promotionPrice": "0.59 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "tofu.jpg"
+                }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
+                }, {
+                    "origPrice": "0.99 per 100g",
+                    "isHot": false,
+                    "name": "Onion",
+                    "promotionPrice": "0.59 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "onion.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Ikan Bilis",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "ikan bilis.jpg"
+                }
+            ],
+            "img": "Cold Storage.jpeg"
+        }, {
+            "id": 2,
+            "postal": 768111,
+            "name": "Giant",
+            "promotion": [
+                {
+                    "origPrice": "1 for 3",
+                    "isHot": true,
+                    "name": "Choy Sum",
+                    "promotionPrice": "0.59 for 3",
+                    "validtill": "31 Mar 2014",
+                    "img": "choysum.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "name": "Carrot",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "carrot.jpg"
+                }, {
+                    "origPrice": "2 per kg",
+                    "isHot": true,
+                    "name": "Pork",
+                    "promotionPrice": "1.59 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "pork.jpg"
+                }, {
+                    "origPrice": "1 per 500g",
+                    "isHot": false,
+                    "name": "Cabbage",
+                    "promotionPrice": "0.59 per 500g",
+                    "validtill": "31 Mar 2014",
+                    "img": "cabbage.jpg"
+                }, {
+                    "origPrice": "1 per 100g",
+                    "isHot": false,
+                    "name": "Eggplant",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "eggplant.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Potato",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "potato.jpg"
+                }, {
+                    "origPrice": "5 per pack",
+                    "isHot": false,
+                    "name": "Egg",
+                    "promotionPrice": "3.99 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "egg.jpg"
+                }, {
+                    "origPrice": "10 per kg",
+                    "isHot": false,
+                    "name": "Prawn",
+                    "promotionPrice": "7.99 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "prawn.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Salmon",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "salmon.jpg"
+                }, {
+                    "origPrice": "0.7 per pack",
+                    "isHot": false,
+                    "name": "Tofu",
+                    "promotionPrice": "0.59 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "tofu.jpg"
+                }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
+                }, {
+                    "origPrice": "0.99 per 100g",
+                    "isHot": false,
+                    "name": "Onion",
+                    "promotionPrice": "0.59 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "onion.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Ikan Bilis",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "ikan bilis.jpg"
+                }
+            ],
+            "img": "Giant.jpg"
+        }, {
+            "id": 3,
+            "postal": 768321,
+            "name": "NTUC FairPrice",
+            "promotion": [
+                {
+                    "origPrice": "1 for 3",
+                    "isHot": true,
+                    "name": "Choy Sum",
+                    "promotionPrice": "0.59 for 3",
+                    "validtill": "31 Mar 2014",
+                    "img": "choysum.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "name": "Carrot",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "carrot.jpg"
+                }, {
+                    "origPrice": "2 per kg",
+                    "isHot": true,
+                    "name": "Pork",
+                    "promotionPrice": "1.59 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "pork.jpg"
+                }, {
+                    "origPrice": "1 per 500g",
+                    "isHot": false,
+                    "name": "Cabbage",
+                    "promotionPrice": "0.59 per 500g",
+                    "validtill": "31 Mar 2014",
+                    "img": "cabbage.jpg"
+                }, {
+                    "origPrice": "1 per 100g",
+                    "isHot": false,
+                    "name": "Eggplant",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "eggplant.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Potato",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "potato.jpg"
+                }, {
+                    "origPrice": "5 per pack",
+                    "isHot": false,
+                    "name": "Egg",
+                    "promotionPrice": "3.99 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "egg.jpg"
+                }, {
+                    "origPrice": "10 per kg",
+                    "isHot": false,
+                    "name": "Prawn",
+                    "promotionPrice": "7.99 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "prawn.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Salmon",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "salmon.jpg"
+                }, {
+                    "origPrice": "0.7 per pack",
+                    "isHot": false,
+                    "name": "Tofu",
+                    "promotionPrice": "0.59 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "tofu.jpg"
+                }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
+                }, {
+                    "origPrice": "0.99 per 100g",
+                    "isHot": false,
+                    "name": "Onion",
+                    "promotionPrice": "0.59 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "onion.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Ikan Bilis",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "ikan bilis.jpg"
+                }
+            ],
+            "img": "NTUC FairPrice.png"
+        }, {
+            "id": 4,
+            "postal": 768555,
+            "name": "Sheng Siong",
+            "promotion": [
+                {
+                    "origPrice": "1 for 3",
+                    "isHot": true,
+                    "name": "Choy Sum",
+                    "promotionPrice": "0.59 for 3",
+                    "validtill": "31 Mar 2014",
+                    "img": "choysum.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "name": "Carrot",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "carrot.jpg"
+                }, {
+                    "origPrice": "2 per kg",
+                    "isHot": true,
+                    "name": "Pork",
+                    "promotionPrice": "1.59 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "pork.jpg"
+                }, {
+                    "origPrice": "1 per 500g",
+                    "isHot": false,
+                    "name": "Cabbage",
+                    "promotionPrice": "0.59 per 500g",
+                    "validtill": "31 Mar 2014",
+                    "img": "cabbage.jpg"
+                }, {
+                    "origPrice": "1 per 100g",
+                    "isHot": false,
+                    "name": "Eggplant",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "eggplant.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Potato",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "potato.jpg"
+                }, {
+                    "origPrice": "5 per pack",
+                    "isHot": false,
+                    "name": "Egg",
+                    "promotionPrice": "3.99 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "egg.jpg"
+                }, {
+                    "origPrice": "10 per kg",
+                    "isHot": false,
+                    "name": "Prawn",
+                    "promotionPrice": "7.99 per kg",
+                    "validtill": "31 Mar 2014",
+                    "img": "prawn.jpg"
+                }, {
+                    "origPrice": "2 for 5",
+                    "isHot": false,
+                    "name": "Salmon",
+                    "promotionPrice": "0.99 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "salmon.jpg"
+                }, {
+                    "origPrice": "0.7 per pack",
+                    "isHot": false,
+                    "name": "Tofu",
+                    "promotionPrice": "0.59 per pack",
+                    "validtill": "31 Mar 2014",
+                    "img": "tofu.jpg"
+                }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
+                }, {
+                    "origPrice": "0.99 per 100g",
+                    "isHot": false,
+                    "name": "Onion",
+                    "promotionPrice": "0.59 for 5",
+                    "validtill": "31 Mar 2014",
+                    "img": "onion.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Ikan Bilis",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "ikan bilis.jpg"
+                }
+            ],
+            "img": "Sheng Siong.jpeg"
+        }
     ];
 
 });
