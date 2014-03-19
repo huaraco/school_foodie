@@ -17,16 +17,49 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-heading">Recipes</div>
-    <div class="panel-body ingredientList" style="text-align:center;">
+    <div class="panel-body ">
+        
+        <div class="col-xs-12 col-md-6 col-lg-6" ng-repeat="rec in ingredient.recipes | orderBy:'name' ">
+            <div class="panel ">
+                <div class="panel-body" style="padding:0px">
+                    <div class="row">
+                        <div class="col-xs-4" style="padding: 0 5px;">
+                            <a href="#/recipe/{{rec.id}}" class="thumbnail">
+                                <img src="img/{{rec.img}}">
+                            </a>
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    {{rec.name}}
+                                    <img src="img/hot.png" class="hotIcon" ng-show="rec.isHot">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="label label-primary">{{rec.dLvl}}</span>
+                                    <span class="label label-warning">
+                                        <img src="img/chili.png" style="height:20px;" ng-repeat="r in range(rec.spicy)" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <ul class="list-inline">
-            <li ng-repeat="recipe in ingredient.recipes" class="text-center">
-                <a href="#/recipe/{{recipe.id}}">
-                    <img src="img/{{recipe.img}}" class="thumbnail" style="height:70px;" />
-                    <span>{{recipe.name}}</span>
-                </a>
-            </li>
-        </ul>
-
+        <!--<div class="ingredientList">
+            <ul class="list-inline">
+                <li ng-repeat="recipe in ingredient.recipes" class="text-center">
+                    <a href="#/recipe/{{recipe.id}}">
+                        <img src="img/{{recipe.img}}" class="thumbnail" style="height:70px;" />
+                        <span>{{recipe.name}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>-->
     </div>
 </div>
