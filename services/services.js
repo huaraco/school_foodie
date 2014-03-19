@@ -78,9 +78,9 @@ app.service('cooKeyService', function ($firebase) {
     var ingredients = [
         {
             id: 1,
-            name: 'Chili',
+            name: 'Chilli',
             unit: 'g',
-            categoryId: 4,
+            categoryId: 2,
             img: 'chilli.jpg',
             description: 'Chili is spicy'
         },
@@ -123,7 +123,156 @@ app.service('cooKeyService', function ($firebase) {
             categoryId: 1,
             img: 'chicken.jpg',
             description: ''
+        },{
+            id: 7,
+            name: 'Flour',
+            unit: '',
+            categoryId: 4,
+            img: 'flour.jpg',
+            description: ''
+        },{
+            id: 8,
+            name: 'Cilantro',
+            unit: '',
+            categoryId: 2,
+            img: 'corianderplant.jpg',
+            description: ''
+        },{
+            id: 9,
+            name: 'Garlic',
+            unit: '',
+            categoryId: 2,
+            img: 'garlic.jpg',
+            description: ''
+        },{
+            id: 10,
+            name: 'Lime',
+            unit: '',
+            categoryId: 2,
+            img: 'lime.jpg',
+            description: ''
+        },{
+            id: 11,
+            name: 'Spring Onion',
+            unit: '',
+            categoryId: 2,
+            img: 'springOnion.jpg',
+            description: ''
+        },{
+            id: 12,
+            name: 'Vegetable Oil',
+            unit: '',
+            categoryId: 4,
+            img: 'vegetableoil.jpg',
+            description: ''
         },
+		{
+            id: 13,
+            name: 'Egg',
+            unit: '',
+            categoryId: 1,
+            img: 'egg.jpg',
+            description: ''
+        },
+		{
+            id: 14,
+            name: 'Potato',
+            unit: '',
+            categoryId: 2,
+            img: 'potato.jpg',
+            description: ''
+        },{
+            id: 15,
+            name: 'Onion',
+            unit: '',
+            categoryId: 2,
+            img: 'onion.jpg',
+            description: ''
+        },{
+            id: 16,
+            name: 'Dried Red Chilli',
+            unit: '',
+            categoryId: 2,
+            img: 'driedredchilli.jpg',
+            description: ''
+        },{
+            id: 17,
+            name: 'Tumeric',
+            unit: '',
+            categoryId: 2,
+            img: 'tumeric.jpg',
+            description: ''
+        },{
+            id: 18,
+            name: 'Galangal',
+            unit: '',
+            categoryId: 2,
+            img: 'galangal.jpg',
+            description: ''
+        },{
+            id: 19,
+            name: 'Ginger',
+            unit: '',
+            categoryId: 2,
+            img: 'ginger.jpg',
+            description: ''
+        },{
+            id: 20,
+            name: 'Candlenut',
+            unit: '',
+            categoryId: 2,
+            img: 'candlenut.jpg',
+            description: ''
+        },{
+            id: 21,
+            name: 'Belachan',
+            unit: '',
+            categoryId: 2,
+            img: 'belachan.jpg',
+            description: ''
+        },{
+            id: 22,
+            name: 'Lemongrass',
+            unit: '',
+            categoryId: 2,
+            img: 'lemongrass.jpg',
+            description: ''
+        },{
+            id: 23,
+            name: 'Ground Coriander',
+            unit: '',
+            categoryId: 2,
+            img: 'groundcoriander.jpg',
+            description: ''
+        },{
+            id: 24,
+            name: 'Pandan',
+            unit: '',
+            categoryId: 2,
+            img: 'pandan.jpg',
+            description: ''
+        },{
+            id: 25,
+            name: 'Kaffir Lime Leave',
+            unit: '',
+            categoryId: 2,
+            img: 'kaffirlimeleave.jpg',
+            description: ''
+        },{
+            id: 26,
+            name: 'Coconut Milk',
+            unit: '',
+            categoryId: 2,
+            img: 'coconutmilk.jpg',
+            description: ''
+        },{
+            id: 27,
+            name: 'Salt',
+            unit: '',
+            categoryId: 4,
+            img: 'salt.jpg',
+            description: ''
+        }
     ];
 
     var recipes = [
@@ -138,55 +287,55 @@ app.service('cooKeyService', function ($firebase) {
           isHot: true,
           ingredients: [
               {
-                  id: 1,
+                  id: 2,
                   name: 'mud crabs or soft shelled crabs',
                   quantity: 450,
                   unit: 'g'
               },
               {
-                  id: 2,
+                  id: 7,
                   name: 'plain flour',
                   quantity: 4,
                   unit: 'tbsp'
               },
               {
-                  id: 3,
+                  id: 12,
                   name: 'vegetable oil',
                   quantity: 3,
                   unit: 'tbsp'
               },
               {
-                  id: 4,
+                  id: 9,
                   name: 'cloves garlic, roughly chopped',
                   quantity: 8,
                   unit: ''
               },
               {
-                  id: 5,
+                  id: 1,
                   name: 'fresh red chilli, roughly chopped',
                   quantity: 8,
                   unit: ''
               },
               {
-                  id: 6,
+                  id: 13,
                   name: 'egg',
                   quantity: 1,
                   unit: ''
               },
               {
-                  id: 7,
+                  id: 11,
                   name: 'spring onions (scallions), cut into finger length',
                   quantity: 2,
                   unit: ''
               },
               {
-                  id: 8,
-                  name: 'freshly squeezed lime or lemon juice',
+                  id: 10,
+                  name: 'freshly squeezed lime',
                   quantity: 1,
                   unit: 'tsp'
               },
               {
-                  id: 9,
+                  id: 8,
                   name: 'small bunch coriander plant (cilantro)',
                   quantity: 1,
                   unit: ''
@@ -196,7 +345,7 @@ app.service('cooKeyService', function ($firebase) {
               {
                   sequence: 1,
                   name: 'Mix together for Sauce',
-                  description: '1 cup of water, 5 tbsp tomato catsup, 1 1/2 to 3 tbsp sugar, or according to taste, 1 1/2 tsp cornflour, 1 tsp pounded brown preserved soya beans or dark miso (optional), 1/4 tsp salt',
+                  description: '<b>Mix together for Sauce</b>: 1 cup of water, 5 tbsp tomato catsup, 1 1/2 to 3 tbsp sugar, or according to taste, 1 1/2 tsp cornflour, 1 tsp pounded brown preserved soya beans or dark miso (optional), 1/4 tsp salt',
                   img: '',
               },
               {
@@ -236,7 +385,7 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-          url: '//www.youtube.com/embed/oI3qHUFfyXo'
+          url: 'http://www.youtube.com/embed/oI3qHUFfyXo'
       },
       {
           id: 2,
@@ -245,35 +394,139 @@ app.service('cooKeyService', function ($firebase) {
           spicy: 1,
           duration: 35,
           img: 'currychicken1.jpg',
-          description: 'chilli Grab is a traditional singaporean food',
+          description: 'Tasty curry chicken ever!',
           ingredients: [
               {
-                  id: 1,
-                  name: 'chilli',
-                  quantity: 20,
+                  id: 6,
+                  name: 'Whole chicken, cut into 12-14 pieces',
+                  quantity: 1,
+                  unit: 'kg'
+              },
+              {
+                  id: 14,
+                  name: 'Small potatoes, peels and halved',
+                  quantity: 5,
+                  unit: ''
+              },
+              {
+                  id: 15,
+                  name: 'Large onion, peels and cut into wedges',
+                  quantity: 1,
+                  unit: ''
+              },
+              {
+                  id: 16,
+                  name: 'Long dried red chillies, soaked in hot water, drained, coarsely groun',
+                  quantity: 10,
                   unit: 'g'
               },
               {
-                  id: 6,
-                  name: 'chicken',
+                  id: 1,
+                  name: 'Long fresh red chillies, coarsely ground',
                   quantity: 2,
                   unit: ''
+              },
+              {
+                  id: 17,
+                  name: 'Piece fresh tumeric',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 18,
+                  name: 'Piece galangal, sliced',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 19,
+                  name: 'Piece ginger, skinned',
+                  quantity: 4,
+                  unit: 'cm'
+              },
+              {
+                  id: 9,
+                  name: 'Garlic, peeled',
+                  quantity: 3,
+                  unit: 'cloves'
+              },
+              {
+                  id: 20,
+                  name: 'Candlenuts',
+                  quantity: 2,
+                  unit: ''
+              },
+              {
+                  id: 21,
+                  name: 'Balachan, wrapped in foil and toasted in a dry pan until fragrant',
+                  quantity: 1,
+                  unit: 'rounded tbsp'
+              },
+              {
+                  id: 22,
+                  name: 'Lemongrass, white part only',
+                  quantity: 2,
+                  unit: 'stalks'
+              },
+              {
+                  id: 23,
+                  name: 'Ground coriander',
+                  quantity: 2,
+                  unit: 'tbsp'
+              }
+			  ,{
+                  id: 12,
+                  name: 'Oil',
+                  quantity: 1,
+                  unit: ''
+              },{
+                  id: 24,
+                  name: 'Pandan, tied to a knot',
+                  quantity: 1,
+                  unit: ''
+              },{
+                  id: 25,
+                  name: 'Kaffir lime leaf',
+                  quantity: 2,
+                  unit: ''
+              },{
+                  id: 26,
+                  name: 'Coconut milk',
+                  quantity: 2,
+                  unit: 'cups'
+              },{
+                  id: 27,
+                  name: 'Salt',
+                  quantity: 1,
+                  unit: 'tsp'
+              },{
+                  id: 28,
+                  name: 'Sugar',
+                  quantity: '1/2',
+                  unit: 'tsp'
               }
           ],
           steps: [
               {
                   sequence: 1,
                   name: 'prepare',
-                  description: 'clean your dishes <a href="#/recipe/1">chilli crab</a>',
+                  description: 'In a blender or mortar and pestle, grind onion, chillies, tumeric, galangal, ginger, garlic, candlenuts and balachan to a paste. (The paste is called Rempah)',
                   img: '',
               },
               {
                   sequence: 2,
                   name: 'cook',
-                  description: 'cook your dishes',
+                  description: 'Heat 4 tbsp of oil in a large pot, add the rempah and lemongrass and cook on medium heat until fragrant. Add the ground coriander and cook for a further 5 minutes.',
+                  img: '',
+              },
+              {
+                  sequence: 3,
+                  name: 'cook',
+                  description: 'Add chicken pieces, pandan and kaffir lime leaves. Stir until well coated, then add the potatoes and coconut milk, stir well and cook until both chicken and potatoes are cooked and tender. Season with salt and sugar. Be careful not to break up the potatoes when stirring.',
                   img: '',
               }
-          ]
+          ],
+		  url: 'N/A'
       },
       {
           id: 3,
