@@ -412,6 +412,20 @@ app.service('cooKeyService', function ($firebase) {
             categoryId: 3,
             img: 'grouper.jpg',
             description: ''
+        },{
+            id: 48,
+            name: 'Sea cucumber',
+            unit: '',
+            categoryId: 3,
+            img: 'seacucumber.jpg',
+            description: ''
+        },{
+            id: 49,
+            name: 'Silver perch',
+            unit: '',
+            categoryId: 3,
+            img: 'silverperch.jpg',
+            description: ''
         }
     ];
 
