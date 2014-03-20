@@ -1,7 +1,7 @@
 ﻿<div ng-hide="searchKeyWord==''">
     <div class="container ingredientList">
         <ul class="list-inline">
-            <li ng-repeat="ingre in ingredients | filter: searchKeyWord" class="text-center">
+            <li ng-repeat="ingre in ingredients | filter: {name: searchKeyWord}" class="text-center">
                 <img src="img/{{ingre.img}}" class="thumbnail" style="height:70px;" ng-click="addIngredient(ingre)" />
                 <span>{{ingre.name}}</span>
             </li>

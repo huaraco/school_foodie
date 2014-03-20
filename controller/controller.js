@@ -121,9 +121,10 @@ app.controller('diyResultController', function ($scope, cooKeyService) {
 
 app.controller('careController', function ($scope, cooKeyService) {
     $scope.articles = cooKeyService.getArticles();
+    $scope.todayArticles = cooKeyService.getTodayArticles();
     $scope.previousArticles = cooKeyService.getPreviousArticles();
     $scope.featuredArticles = cooKeyService.getFeaturedArticles();
-
+    $scope.$parent.searchPlaceholder = "article";
 });
 
 app.controller('careDetailController', function ($scope, $routeParams, cooKeyService) {

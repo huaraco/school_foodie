@@ -1,29 +1,28 @@
 ﻿<div class="container">
     <div class="col-xs-12 col-md-6 col-lg-6">
-        <div class="panel panel-default">
+        <div class="">
             <div class="panel-body">
                 <div>
                     <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <!--<ol class="carousel-indicators">
+                    <!--<ol class="carousel-indicators">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                         </ol>-->
-
-                        <!-- Wrapper for slides -->
-                        <carousel interval="3000">
-                            <slide ng-repeat="featuredArticle in featuredArticles" active="slide.active">
-                                <div style="height:150px; overflow: hidden; vertical-align:middle;">
-                                    <img ng-src="img/{{featuredArticle.img}}" style="margin:auto; width:100%;">    
-                                </div>
-                                <div class="carousel-caption">
-                                    <p>{{featuredArticle.name}}</p>
-                                </div>
-                            </slide>
-                        </carousel>
-                        <!--<div class="carousel-inner">
+                    <!-- Wrapper for slides -->
+                    <carousel interval="3000">
+                        <slide ng-repeat="featuredArticle in featuredArticles" active="slide.active">
+                            <div style="height:150px; overflow: hidden; vertical-align:middle;">
+                                <img ng-src="img/{{featuredArticle.img}}" style="margin:auto; width:100%;">
+                            </div>
+                            <div class="carousel-caption">
+                                <p>{{featuredArticle.name}}</p>
+                            </div>
+                        </slide>
+                    </carousel>
+                    <!--<div class="carousel-inner">
                             <div class="item" ng-repeat="featuredArticle in featuredArticles" ng-class="{active : $first}">
                                 <img src="img/{{featuredArticle.img}}" class="img-responsive center-block" alt="{{featuredArticle.id}}">
                                 <div class="carousel-caption">
@@ -31,9 +30,8 @@
                                 </div>
                             </div>
                         </div>-->
-
-                        <!-- Controls -->
-                        <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <!-- Controls -->
+                    <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
@@ -41,61 +39,88 @@
                         </a>-->
                     <!--</div>-->
                 </div>
-
-                <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
-                    <b>Today's news</b>
-                </div>
-                <div class="row" ng-repeat="article in articles" style="margin-bottom: 5px; margin-top: 5px;">
-                    <div class="col-xs-2" style="padding: 0 5px;">
-                        <a href="#/care/{{article.id}}" class="thumbnail">
-                            <img src="img/{{article.img}}">
-                        </a>
+                <div ng-show="searchKeyWord">
+                    <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
+                        <b>News</b>
                     </div>
-                    <div class="col-xs-10">
-                        <div class="row">
-                            <div class="col-xs-6 text-left">
-                                {{article.author}}
-                            </div>
-                            <div class="col-xs-6 text-right">
-                                {{article.date}}
-                            </div>
+                    <div class="row" ng-repeat="article in articles | filter: {name: searchKeyWord}" style="margin-bottom: 5px; margin-top: 5px;">
+                        <div class="col-xs-2" style="padding: 0 5px;">
+                            <a href="#/care/{{article.id}}" class="thumbnail">
+                                <img src="img/{{article.img}}">
+                            </a>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <b>{{article.name}}</b>
+                        <div class="col-xs-10">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">
+                                    {{article.author}}
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    {{article.date}}
+                                </div>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
-                    <b>Tuesday, 2 July</b>
-                </div>
-                <div class="row" ng-repeat="previousArticle in previousArticles" style="margin-bottom: 5px; margin-top: 5px;">
-                    <div class="col-xs-2" style="padding: 0 5px;">
-                        <a href="#/previousArticle/{{previousArticle.id}}" class="thumbnail">
-                            <img src="img/{{previousArticle.img}}">
-                        </a>
-                    </div>
-                    <div class="col-xs-10">
-                        <div class="row">
-                            <div class="col-xs-6 text-left">
-                                {{previousArticle.author}}
-                            </div>
-                            <div class="col-xs-6 text-right">
-                                {{previousArticle.date}}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <b>{{previousArticle.name}}</b>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <b>{{article.name}}</b>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <div ng-hide="searchKeyWord">
+                    <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
+                        <b>Today's news</b>
+                    </div>
+                    <div class="row" ng-repeat="article in todayArticles" style="margin-bottom: 5px; margin-top: 5px;">
+                        <div class="col-xs-2" style="padding: 0 5px;">
+                            <a href="#/care/{{article.id}}" class="thumbnail">
+                                <img src="img/{{article.img}}">
+                            </a>
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">
+                                    {{article.author}}
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    {{article.date}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <b>{{article.name}}</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
+                        <b>Tuesday, 2 July</b>
+                    </div>
+                    <div class="row" ng-repeat="previousArticle in previousArticles" style="margin-bottom: 5px; margin-top: 5px;">
+                        <div class="col-xs-2" style="padding: 0 5px;">
+                            <a href="#/previousArticle/{{previousArticle.id}}" class="thumbnail">
+                                <img src="img/{{previousArticle.img}}">
+                            </a>
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">
+                                    {{previousArticle.author}}
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    {{previousArticle.date}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <b>{{previousArticle.name}}</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
