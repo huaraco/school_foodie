@@ -1791,6 +1791,12 @@ app.service('cooKeyService', function ($firebase) {
             ingredientB: 2,
             ingredients: [73, 2],
             description: "Tomato with crab will incur diarrhea."
+        },
+        {
+            ingredientA: 5,
+            ingredientB: 10,
+            ingredients: [5, 10],
+            description: "Beef cooked with lime will harm your body."
         }
     ];
 
