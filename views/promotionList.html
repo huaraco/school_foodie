@@ -1,5 +1,5 @@
 ﻿<div class="container promotionList">
-	<div ng-repeat="promotion in promotions | orderBy:'name'">
+	<div ng-repeat="promotion in promotions | orderBy:'name' | filter: {name: searchKeyWord}">
         <div class="col-12">
             <div class="panel panel-default">
               <div class="panel-body">
