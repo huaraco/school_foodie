@@ -43,23 +43,15 @@
                     <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
                         <b>News</b>
                     </div>
-                    <div class="row" ng-repeat="article in articles | filter: {name: searchKeyWord}" style="margin-bottom: 5px; margin-top: 5px;">
-                        <div class="col-xs-2" style="padding: 0 5px;">
-                            <a href="#/care/{{article.id}}" class="thumbnail">
+                    <div class="row" ng-repeat="article in articles | filter: {name: searchKeyWord}" style="margin-bottom: 5px; margin-top: 0px; border-bottom: 1px solid #eee; ">
+                        <div class="col-xs-2" style="padding: 0 0px; margin:0;">
+                            <a href="#/care/{{article.id}}" class="thumbnail" style="border-radius: 0px; border:0px;">
                                 <img src="img/{{article.img}}">
                             </a>
                         </div>
                         <div class="col-xs-10">
                             <div class="row">
-                                <div class="col-xs-6 text-left">
-                                    {{article.author}}
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    {{article.date}}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-xs-12 text-left">
                                     <b>{{article.name}}</b>
                                 </div>
                             </div>
@@ -71,51 +63,37 @@
                     <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
                         <b>Today's news</b>
                     </div>
-                    <div class="row" ng-repeat="article in todayArticles" style="margin-bottom: 5px; margin-top: 5px;">
-                        <div class="col-xs-2" style="padding: 0 5px;">
-                            <a href="#/care/{{article.id}}" class="thumbnail">
+                    <div class="row" ng-repeat="article in todayArticles" style="margin-bottom: 5px; margin-top: 0px; border-bottom: 1px solid #eee;  ">
+
+                        <div class="col-xs-2" style="padding: 0 0px; margin:0;">
+                            <a href="#/care/{{article.id}}" class="thumbnail" style="border-radius: 0px; border:0px;">
                                 <img src="img/{{article.img}}">
                             </a>
                         </div>
                         <div class="col-xs-10">
                             <div class="row">
-                                <div class="col-xs-6 text-left">
-                                    {{article.author}}
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    {{article.date}}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-xs-12 text-left">
                                     <b>{{article.name}}</b>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
 
                     <div class="row text-center" style="background: grey; color: white; margin-bottom: 5px; margin-top: 5px;">
                         <b>Tuesday, 2 July</b>
                     </div>
-                    <div class="row" ng-repeat="previousArticle in previousArticles" style="margin-bottom: 5px; margin-top: 5px;">
-                        <div class="col-xs-2" style="padding: 0 5px;">
-                            <a href="#/previousArticle/{{previousArticle.id}}" class="thumbnail">
-                                <img src="img/{{previousArticle.img}}">
+                    <div class="row" ng-repeat="article in previousArticles" style="margin-bottom: 5px; margin-top: 0px; border-bottom: 1px solid #eee; ">
+                        <div class="col-xs-2" style="padding: 0 0px; margin:0;">
+                            <a href="#/care/{{article.id}}" class="thumbnail" style="border-radius: 0px; border:0px;">
+                                <img src="img/{{article.img}}">
                             </a>
                         </div>
                         <div class="col-xs-10">
                             <div class="row">
-                                <div class="col-xs-6 text-left">
-                                    {{previousArticle.author}}
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    {{previousArticle.date}}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <b>{{previousArticle.name}}</b>
+                                <div class="col-xs-12 text-left">
+                                    <b>{{article.name}}</b>
                                 </div>
                             </div>
                         </div>
