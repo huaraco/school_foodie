@@ -18,7 +18,7 @@ app.service('cooKeyService', function ($firebase) {
     };
 
     this.getFeaturedArticles = function () {
-        return _.filter(articles, function(item) {
+        return _.filter(articles, function (item) {
             return item.isFeature;
         });
     }
@@ -1381,10 +1381,21 @@ app.service('cooKeyService', function ($firebase) {
           tag: 'Snack',
           isFeature: true
       },
+       {
+           id: 11,
+           name: 'The nutrition of beef',
+           content: 'How Safe Is Splenda (Sucralose)?',
+           img: 'care_beef.jpg',
+           author: 'Sandeep Godiyal',
+           copyright: 'Medical News Today',
+           date: '18/03/2014',
+           tag: 'Snack',
+           isFeature: true
+       }
 
     ];
 
-   
+
     var stores =
     [
         {
