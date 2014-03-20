@@ -26,7 +26,7 @@
                 <form class="navbar-form navbar-right" role="search" style="float:right; margin: 0 -15px;">
                     <div class="form-group form-inline inline-group">
                         <input type="text" class="holo" placeholder="{{searchPlaceholder}}" ng-model="searchKeyWord" style="width:150px; float:left;">
-                        <div class="label label-warning"
+                        <div class="label label-warning" onclick="showLoading();"
                              style="margin-left: 5px; margin-top:7px; float:left; padding: 5px 10px;"
                              ng-show="getLocation()=='/promotion'">
                             <span class="glyphicon glyphicon-map-marker" />
@@ -45,7 +45,11 @@
 
 
     <div ng-view>
+<<<<<<< HEAD
+        <div style="margin:0 auto;" id="spinner"></div>
+=======
         <div style="margin:0;" id="spinner"></div>
+>>>>>>> fca33fe6ddc1a14d01638956d08a3078c7d365bb
     </div>
 
 
@@ -158,7 +162,12 @@
     <script>
         var target = document.getElementById("spinner");
         var spinner = new Spinner().spin(target);
-
+		
+		function showLoading(){
+			$("#loading").show();
+			$(".promotionStores").hide()
+			window.setTimeout(function(){$("#loading").hide();$(".promotionStores").show()},3000);
+		}
     </script>
 </body>
 </html>

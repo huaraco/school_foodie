@@ -24,6 +24,7 @@ app.controller('rootController', function ($scope, $location) {
 app.controller('recipeController', function ($scope, cooKeyService) {
     $scope.recipes = cooKeyService.getRecipes();
     $scope.$parent.searchPlaceholder = 'Recipe';
+	spinner.stop();
 });
 
 app.controller('recipeDetailController', function ($scope, $routeParams, $sce, cooKeyService) {
