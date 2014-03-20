@@ -13,6 +13,8 @@ h4{
 	font-weight:"bold";
 }
 
+
+
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
@@ -143,7 +145,7 @@ input.holo[type='text'] {
 .ingredientList ul li {
     padding: 0px;
     margin: 6px;
-    height: 100px;
+    height: 108px;
     width: 97px;
     overflow: hidden;
     text-align: center;
@@ -163,11 +165,24 @@ input.holo[type='text'] {
     display: inline-block;
     
     width: 97px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	height:40px;
+    white-space: normal;
     overflow: hidden;
 }
 
 .carousel-indicators {
     display: none;
+}
+
+.promotionList ul li {
+    padding: 0px;
+    margin: 6px;
+    height: 100px;
+    width: 97px;
+    overflow: hidden;
+    text-align: center;
+}
+.promotionList .frame  img{
+    width: 95px;
+    height: 70px;   
 }

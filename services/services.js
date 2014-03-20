@@ -451,28 +451,28 @@ app.service('cooKeyService', function ($firebase) {
 		    img: 'salmon.jpg',
 		    description: ''
 		}, {
-		    id: 50,
+		    id: 51,
 		    name: 'Mussel',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'mussel.jpg',
 		    description: ''
 		}, {
-		    id: 51,
+		    id: 52,
 		    name: 'Stingray',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'stingray.jpg',
 		    description: ''
 		}, {
-		    id: 52,
+		    id: 53,
 		    name: 'Tuna',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'tuna.jpg',
 		    description: ''
 		}, {
-		    id: 53,
+		    id: 54,
 		    name: 'Crayfish',
 		    unit: '',
 		    categoryId: 3,
