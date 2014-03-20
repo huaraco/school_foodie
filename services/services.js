@@ -1474,13 +1474,6 @@ app.service('cooKeyService', function ($firebase) {
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
                 }, {
-                    "origPrice": "1 ea",
-                    "isHot": false,
-                    "name": "Cucumber",
-                    "promotionPrice": "0.8 ea",
-                    "validtill": "31 Mar 2014",
-                    "img": "cucumber.jpg"
-                }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
                     "name": "Onion",
@@ -1572,13 +1565,6 @@ app.service('cooKeyService', function ($firebase) {
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
                 }, {
-                    "origPrice": "1 ea",
-                    "isHot": false,
-                    "name": "Cucumber",
-                    "promotionPrice": "0.8 ea",
-                    "validtill": "31 Mar 2014",
-                    "img": "cucumber.jpg"
-                }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
                     "name": "Onion",
@@ -1669,14 +1655,7 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per pack",
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
-                }, {
-                    "origPrice": "1 ea",
-                    "isHot": false,
-                    "name": "Cucumber",
-                    "promotionPrice": "0.8 ea",
-                    "validtill": "31 Mar 2014",
-                    "img": "cucumber.jpg"
-                }, {
+                },  {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
                     "name": "Onion",
@@ -1767,13 +1746,6 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per pack",
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
-                }, {
-                    "origPrice": "1 ea",
-                    "isHot": false,
-                    "name": "Cucumber",
-                    "promotionPrice": "0.8 ea",
-                    "validtill": "31 Mar 2014",
-                    "img": "cucumber.jpg"
                 }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
