@@ -1589,7 +1589,7 @@ app.service('cooKeyService', function ($firebase) {
             "img": "Giant.jpg"
         }, {
             "id": 3,
-            "postal": 768321,
+            "postal": 769321,
             "name": "NTUC FairPrice",
             "promotion": [
                 {
@@ -1680,7 +1680,7 @@ app.service('cooKeyService', function ($firebase) {
             "img": "NTUC FairPrice.png"
         }, {
             "id": 4,
-            "postal": 768555,
+            "postal": 769555,
             "name": "Sheng Siong",
             "promotion": [
                 {
