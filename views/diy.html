@@ -27,9 +27,9 @@
             <ul class="list-inline">
                 <li ng-repeat="ingre in showIngredients(cat.id)| orderBy:'name'" class="text-center">
                     <div class="frame">
-                        <img src="img/{{ingre.img}}" class="thumbnail" ng-click="addIngredient(ingre)" />    
+                        <img src="img/{{ingre.img}}" class="thumbnail" ng-click="addIngredient(ingre)" />
                     </div>
-                    
+
                     <span>{{ingre.name}}</span>
                 </li>
             </ul>
@@ -52,19 +52,21 @@
              </div>
          </div> -->
     <!--list selected ingredients-->
- 
+
 
 </div>
 
+<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)" style="position:absolute; top:50px; width:100%;">{{alert.msg}}</alert>
 <div class="well well-small" style="position:fixed; bottom:10px; width:100%; padding:15px; padding-top:5px;">
-    <div class="col-xs-10">
-        <ul class="nav nav-pills" style="padding:3px;">
+
+    <div class="col-xs-9">
+        <ul class="list-inline" style="padding:3px; ">
             <li class="active" ng-repeat="ingre in diyIngredients" ng-click="removeIngredient(ingre)">
-                <a>{{ingre.name}}</a>
+                <div class="label label-info">{{ingre.name}}</div>
             </li>
         </ul>
     </div>
-    <div class="col-xs-2 text-right">
-        <a href="#/diy/result" class="btn btn-primary">Go</a>
+    <div class="col-xs-3 text-right">
+        <a ng-click="checkIngredient()" class="btn btn-primary">{{search}}</a>
     </div>
 </div>
