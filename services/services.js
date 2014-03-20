@@ -467,28 +467,28 @@ app.service('cooKeyService', function ($firebase) {
 		    img: 'salmon.jpg',
 		    description: ''
 		}, {
-		    id: 51,
+		    id: 50,
 		    name: 'Mussel',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'mussel.jpg',
 		    description: ''
 		}, {
-		    id: 52,
+		    id: 51,
 		    name: 'Stingray',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'stingray.jpg',
 		    description: ''
 		}, {
-		    id: 53,
+		    id: 52,
 		    name: 'Tuna',
 		    unit: '',
 		    categoryId: 3,
 		    img: 'tuna.jpg',
 		    description: ''
 		}, {
-		    id: 54,
+		    id: 53,
 		    name: 'Crayfish',
 		    unit: '',
 		    categoryId: 3,
@@ -1462,6 +1462,13 @@ app.service('cooKeyService', function ($firebase) {
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
                 }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
+                }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
                     "name": "Onion",
@@ -1643,7 +1650,7 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per pack",
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
-                },  {
+                }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
                     "name": "Onion",
@@ -1734,6 +1741,13 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per pack",
                     "validtill": "31 Mar 2014",
                     "img": "tofu.jpg"
+                }, {
+                    "origPrice": "1 ea",
+                    "isHot": false,
+                    "name": "Cucumber",
+                    "promotionPrice": "0.8 ea",
+                    "validtill": "31 Mar 2014",
+                    "img": "cucumber.jpg"
                 }, {
                     "origPrice": "0.99 per 100g",
                     "isHot": false,
