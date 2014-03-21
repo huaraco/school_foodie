@@ -1285,7 +1285,12 @@ app.service('cooKeyService', function ($firebase) {
         author: 'Janet D. Embanecido',
         copyright: 'Medical News Today',
         date: '18/03/2014',
-        tag: 'crab',
+        tags: [
+            {
+                id: 2,
+                name: 'crab',
+            }
+        ],
         isFeature: true
     },
 
@@ -1389,7 +1394,12 @@ app.service('cooKeyService', function ($firebase) {
            author: 'Sandeep Godiyal',
            copyright: 'Medical News Today',
            date: '18/03/2014',
-           tag: 'Snack',
+           tags: [
+               {
+                   id: 5,
+                   name: 'beef'
+               }
+           ],
            isFeature: true
        }
 

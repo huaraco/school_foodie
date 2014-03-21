@@ -154,6 +154,8 @@ app.controller('promotionListController', function ($scope, $routeParams, cooKey
             $scope.promotions = cooKeyService.getStore(storeId);// $firebase(promotionRef);
         }
     }
+
+    $scope.$parent.searchPlaceholder = 'ingredient';
 });
 
 app.controller('ingredientController', function ($scope, cooKeyService) {
