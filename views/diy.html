@@ -1,4 +1,4 @@
-﻿<div ng-hide="searchKeyWord==''">
+﻿<!-- <div ng-hide="searchKeyWord==''">
     <div class="container ingredientList">
         <ul class="list-inline">
             <li ng-repeat="ingre in ingredients | filter: {name: searchKeyWord}" class="text-center">
@@ -7,7 +7,7 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 
 <div ng-show="searchKeyWord==''">
     <!--list categories-->
@@ -20,11 +20,12 @@
     </div>
 
     <div class="container ingredientList" >
-        <div ng-repeat="cat in categories " ng-show="selectedCategoryId==cat.id" style="margin-top:20px;">
+        <!-- <div ng-repeat="cat in categories " ng-show="selectedCategoryId==cat.id" style="margin-top:20px;"> -->
+        <div style="margin-top:20px;">
             <ul class="list-inline">
-                <li ng-repeat="ingre in showIngredients(cat.id)| orderBy:'name'" class="item" >
+                <li ng-repeat="ingre in showIngredients(selectedCategoryId)| orderBy:'name'" class="item" >
                     <div class="frame" >
-                            <img src="img/{{ingre.img}}" class="thumbnail" ng-click="toggleIngredient(ingre)"  />
+                            <img src="img/thumbnail/{{ingre.img}}" class="thumbnail" ng-click="toggleIngredient(ingre)"  />
                     </div>
                     <div style=''><span>{{ingre.name}}</span></div>
                     <img src="img/check.png"
@@ -84,15 +85,15 @@ style="position:fixed; bottom:160px; width:100%;">{{alert.msg}}</alert>
 </div>
 
 
-    <script type="text/ng-template" id="modalContent.html">
-        <div class="modal-header">
-            <h3>Warning</h3>
-        </div>
-        <div class="modal-body">
-            <span ng-repeat="item in items">{{item.msg}}</span>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-warning" ng-click="cancel()">Re-select</button>
-            <button class="btn btn-primary" ng-click="ok()">I want to Continue</button>
-        </div>
-    </script>
+<script type="text/ng-template" id="modalContent.html">
+    <div class="modal-header">
+        <h3>Warning</h3>
+    </div>
+    <div class="modal-body">
+        <span ng-repeat="item in items">{{item.msg}}</span>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Re-select</button>
+        <button class="btn btn-primary" ng-click="ok()">I want to Continue</button>
+    </div>
+</script>
