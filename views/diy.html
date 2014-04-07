@@ -11,7 +11,7 @@
 
 <div ng-show="searchKeyWord==''">
     <!--list categories-->
-    <div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px; background: rgba(0,0,0,0.7); position:fixed; z-index:9999">
+    <div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px; background: rgba(0,0,0,0.7); position:fixed; z-index:999">
         <div class="row text-center" id="bottomNav">
             <div class="col-xs-3" ng-repeat="cat in categories" style="padding:10px; margin:0px;" ng-class="{'active':cat.id == selectedCategoryId}">
                 <a id="a{{cat.id}}" ng-click="showCategory(cat.id)">{{cat.name}}</a>
@@ -24,15 +24,18 @@
             <ul class="list-inline">
                 <li ng-repeat="ingre in showIngredients(cat.id)| orderBy:'name'" class="item" >
                     <div class="frame" >
-                        <!-- <a href="#/ingredient/{{ingre.id}}"> -->
-                            <img src="img/{{ingre.img}}" class="thumbnail" ng-click="addIngredient(ingre)"  />
-                        <!-- </a> -->
+                            <img src="img/{{ingre.img}}" class="thumbnail" ng-click="toggleIngredient(ingre)"  />
                     </div>
                     <div style=''><span>{{ingre.name}}</span></div>
                     <img src="img/check.png"
                         ng-show="isSelected(ingre)"
                         class="icon"
                      />
+                     <a href="#/ingredient/{{ingre.id}}">
+                     <img src="img/more.png"
+                        class="iconBottom"
+                     />
+                     </a>
                 </li>
             </ul>
         </div>
@@ -58,14 +61,20 @@
 
 </div>
 
-<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)" style="position:absolute; top:50px; width:100%;">{{alert.msg}}</alert>
+<!-- <alert 
+ng-repeat="alert in alerts" 
+type="alert.type" 
+close="closeAlert($index)" 
+style="position:fixed; bottom:160px; width:100%;">{{alert.msg}}</alert>
+ -->
+ 
 <div class="well well-small" style="position:fixed; bottom:10px; width:100%; padding:15px; padding-top:5px;">
 
     <div class="col-xs-9">
         <ul class="list-inline" style="padding:3px; ">
             <li class="active item" ng-repeat="ingre in diyIngredients" ng-click="removeIngredient(ingre)" >
                 <div class="label label-info">{{ingre.name}}</div>
-                 <!-- <img src="img/close.png" class="icon" style="right:-5px; top:-7px;" /> -->
+                 <img src="img/close.png" class="icon" style="right:-5px; top:-7px;" />
             </li>
         </ul>
     </div>
@@ -73,3 +82,17 @@
         <a ng-click="checkIngredient()" class="btn btn-primary">{{search}}</a>
     </div>
 </div>
+
+
+    <script type="text/ng-template" id="modalContent.html">
+        <div class="modal-header">
+            <h3>Warning</h3>
+        </div>
+        <div class="modal-body">
+            <span ng-repeat="item in items">{{item.msg}}</span>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">Continue</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>

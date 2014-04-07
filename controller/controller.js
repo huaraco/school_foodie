@@ -59,7 +59,7 @@ app.controller('recipeDetailController', function ($scope, $routeParams, $sce, c
 
 });
 
-app.controller('diyController', function ($scope, $location, cooKeyService) {
+app.controller('diyController', function ($scope, $location, $modal, cooKeyService) {
     $scope.categories = cooKeyService.getCategories();
 
     $scope.selectedCategoryId = $scope.categories[0].id;
@@ -70,6 +70,15 @@ app.controller('diyController', function ($scope, $location, cooKeyService) {
 
     $scope.showIngredients = function (categoryId) {
         return cooKeyService.getIngredientsOfCateogry(categoryId);
+    }
+
+    $scope.toggleIngredient = function (ingredient) {
+        if (!_.contains($scope.$parent.diyIngredients, ingredient))
+            $scope.$parent.diyIngredients.push(ingredient);
+        else{
+            $scope.removeIngredient(ingredient);
+        }
+
     }
 
     $scope.addIngredient = function (ingredient) {
@@ -88,10 +97,10 @@ app.controller('diyController', function ($scope, $location, cooKeyService) {
     }
 
     $scope.checkIngredient = function () {
-        if ($scope.search == "Continue") {
-            $scope.search == "Go";
-            $location.path('/diy/result');
-        }
+        // if ($scope.search == "Continue") {
+        //     $scope.search == "Go";
+        //     $location.path('/diy/result');
+        // }
             
 
         var conflicts = cooKeyService.getConflicts();
@@ -106,7 +115,8 @@ app.controller('diyController', function ($scope, $location, cooKeyService) {
             _.each(foundConflicts, function(item) {
                 $scope.alerts.push({ type: 'danger', msg: item.description });
             });
-            $scope.search = "Continue";
+            // $scope.search = "Continue";
+            $scope.open();
         } else {
             $location.path('/diy/result');    
         }
@@ -121,11 +131,42 @@ app.controller('diyController', function ($scope, $location, cooKeyService) {
         $scope.alerts.splice(index, 1);
     };
 
+    $scope.open = function () {
+        var modalInstance = $modal.open({
+          templateUrl: 'modalContent.html',
+          controller: function ($scope, $modalInstance, items) {
+            $scope.items = items;
+            
+            $scope.ok = function () {
+               $modalInstance.close('ok');
+            };
+
+            $scope.cancel = function () {
+                $modalInstance.dismiss('cancel');
+            };
+          },
+          resolve: {
+            items: function () {
+              return $scope.alerts;
+            }
+          }
+        });
+
+        modalInstance.result.then(function (selectedItem) {
+            if(selectedItem=='ok'){
+                $location.path('/diy/result');
+            }
+        }, function () {
+          
+        });
+      };
 
     $scope.ingredients = cooKeyService.getIngredients();
     $scope.$parent.searchKeyWord = '';
     $scope.$parent.searchPlaceholder = 'Ingredient';
 });
+
+
 
 app.controller('diyResultController', function ($scope, cooKeyService) {
     $scope.resultRecipes = [];
