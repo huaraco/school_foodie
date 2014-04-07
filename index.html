@@ -65,7 +65,7 @@
                     </div>
                 </li>
                 <li>
-                    <div  ng-class="{'active':getClass('/diy')}">
+                    <div  ng-class="{'active':(getClass('/diy')||getClass('/ingredient'))}">
                         <a href="#/diy">
                             <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
                             DIY

@@ -145,7 +145,7 @@ app.service('cooKeyService', function ($firebase) {
             unit: '',
             categoryId: 3,
             img: 'Crab.jpg',
-            description: ''
+            description: 'Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" '
         },
         {
             id: 3,
