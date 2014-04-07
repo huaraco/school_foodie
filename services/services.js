@@ -89,6 +89,10 @@ app.service('cooKeyService', function ($firebase) {
         return conflicts;
     }
 
+    this.getRecipeCategories = function(){
+    	return recipeCategories;
+    }
+
     var categories = [
         {
             id: 1,
@@ -106,6 +110,24 @@ app.service('cooKeyService', function ($firebase) {
             id: 4,
             name: 'Others'
         }
+    ];
+
+    var recipeCategories =	[
+    	{	id: 0,
+    		name: 'All'
+    	},
+    	{
+    		id: 1,
+    		name: 'Chinese'
+    	},
+    	{
+    		id: 2,
+    		name: 'Western'
+    	},
+    	{
+    		id: 3,
+    		name: 'Japanese'
+    	}
     ];
 
     var ingredients = [
@@ -824,7 +846,8 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-          url: 'http://www.youtube.com/embed/oI3qHUFfyXo'
+          url: 'http://www.youtube.com/embed/oI3qHUFfyXo',
+          recipeCategory: 1
       },
       {
           id: 2,
@@ -965,7 +988,8 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-          url: 'N/A'
+          url: 'N/A',
+          recipeCategory: 2
       },
       {
           id: 3,
@@ -1002,7 +1026,9 @@ app.service('cooKeyService', function ($firebase) {
                   description: 'cook your dishes',
                   img: '',
               }
-          ]
+          ],
+          url: 'N/A',
+          recipeCategory: 2
       },
       {
           id: 4,
@@ -1154,7 +1180,8 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
           ],
-          url: 'http://www.youtube.com/embed/VioFJSm6zI0'
+          url: 'http://www.youtube.com/embed/VioFJSm6zI0',
+          recipeCategory: 1
       },
 	  {
 	      id: 5,
@@ -1271,49 +1298,50 @@ app.service('cooKeyService', function ($firebase) {
                   img: '',
               }
 	      ],
-	      url: 'http://www.youtube.com/embed/wX95BQ0VfoY'
+	      url: 'http://www.youtube.com/embed/wX95BQ0VfoY',
+          recipeCategory: 3
 	  }
 
     ];
 
     var articles = [
-    {
-        id: 1,
-        name: 'The Nutrition of Crab',
-        content: 'How Safe Is Splenda (Sucralose)?',
-        img: 'care_crab.png',
-        author: 'Janet D. Embanecido',
-        copyright: 'Medical News Today',
-        date: '18/03/2014',
-        tags: [
-            {
-                id: 2,
-                name: 'crab',
-            }
-        ],
-        isFeature: true
-    },
+	    {
+	        id: 1,
+	        name: 'The Nutrition of Crab',
+	        content: 'How Safe Is Splenda (Sucralose)?',
+	        img: 'care_crab.png',
+	        author: 'Janet D. Embanecido',
+	        copyright: 'Medical News Today',
+	        date: '18/03/2014',
+	        tags: [
+	            {
+	                id: 2,
+	                name: 'crab',
+	            }
+	        ],
+	        isFeature: true
+ 	    },
 
-                 {
-                     id: 2,
-                     name: 'Omega-3 in fish: How eating fish helps your heart',
-                     content: 'How Safe Is Splenda (Sucralose)?',
-                     img: 'care_fish.jpg',
-                     author: 'Mayo Clinic Staff',
-                     copyright: 'Medical News Today',
-                     date: '18/03/2014',
-                     tag: 'fish'
-                 },
-                     {
-                         id: 3,
-                         name: 'The Amazing Health Benefits of Black Pepper',
-                         content: 'How Safe Is Splenda (Sucralose)?',
-                         img: 'care_blackpepper.jpg',
-                         author: 'Kassidy Emmerson',
-                         copyright: 'Medical News Today',
-                         date: '18/03/2014',
-                         tag: 'blackpepper'
-                     },
+		{
+		 id: 2,
+		 name: 'Omega-3 in fish: How eating fish helps your heart',
+		 content: 'How Safe Is Splenda (Sucralose)?',
+		 img: 'care_fish.jpg',
+		 author: 'Mayo Clinic Staff',
+		 copyright: 'Medical News Today',
+		 date: '18/03/2014',
+		 tag: 'fish'
+		},
+		{
+		 id: 3,
+		 name: 'The Amazing Health Benefits of Black Pepper',
+		 content: 'How Safe Is Splenda (Sucralose)?',
+		 img: 'care_blackpepper.jpg',
+		 author: 'Kassidy Emmerson',
+		 copyright: 'Medical News Today',
+		 date: '18/03/2014',
+		 tag: 'blackpepper'
+		},
         {
             id: 4,
             name: 'Peanut butter helps diagnose Alzheimers disease',
@@ -1325,83 +1353,83 @@ app.service('cooKeyService', function ($firebase) {
             tag: 'Peanut',
             isFeature: true
         },
-    {
-        id: 5,
-        name: 'How Safe Is Splenda (Sucralose)?',
-        content: 'How Safe Is Splenda (Sucralose)?',
-        img: 'care_splenda.jpg',
-        author: 'Christian Nordqvist',
-        copyright: 'Medical News Today',
-        date: '18/03/2014',
-        tag: 'Splenda'
-    },
-     {
-         id: 6,
-         name: 'Hot chocolate may prevent memory decline',
-         content: 'How Safe Is Splenda (Sucralose)?',
-         img: 'care_chocolate.jpg',
-         author: 'Dr.Catharine Paddock',
-         copyright: 'Medical News Today',
-         date: '18/03/2014',
-         tag: 'Chocolate',
-         isFeature: true
-     },
-       {
-           id: 7,
-           name: 'New science confirms raw milk is remarkably safe',
-           content: 'How Safe Is Splenda (Sucralose)?',
-           img: 'care_milk.jpg',
-           author: 'Ethan A. Huff',
-           copyright: 'Medical News Today',
-           date: '02/07/2013'
-       },
-      {
-          id: 8,
-          name: 'Eight foods that help fight allergies',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_8food.jpg',
-          author: 'Sandeep Godiyal',
-          copyright: 'Medical News Today',
-          date: '02/07/2013',
-          isFeature: true
-      },
-         {
-             id: 9,
-             name: 'Quinoa nutritional benefits',
-             content: 'How Safe Is Splenda (Sucralose)?',
-             img: 'care_quinoa.jpg',
-             author: 'Yanjun',
-             copyright: 'Medical News Today',
-             date: '09/08/2013',
-             tag: 'Quinoa'
-         },
-      {
-          id: 10,
-          name: 'Five healthy snacks you can enjoy without guilt',
-          content: 'How Safe Is Splenda (Sucralose)?',
-          img: 'care_snack.jpg',
-          author: 'Sandeep Godiyal',
-          copyright: 'Medical News Today',
-          date: '11/07/2013',
-          tag: 'Snack',
-          isFeature: true
-      },
-       {
-           id: 11,
-           name: 'The nutrition of beef',
-           content: 'How Safe Is Splenda (Sucralose)?',
-           img: 'care_beef.jpg',
-           author: 'Sandeep Godiyal',
-           copyright: 'Medical News Today',
-           date: '18/03/2014',
-           tags: [
-               {
-                   id: 5,
-                   name: 'beef'
-               }
-           ],
-           isFeature: true
-       }
+		{
+		    id: 5,
+		    name: 'How Safe Is Splenda (Sucralose)?',
+		    content: 'How Safe Is Splenda (Sucralose)?',
+		    img: 'care_splenda.jpg',
+		    author: 'Christian Nordqvist',
+		    copyright: 'Medical News Today',
+		    date: '18/03/2014',
+		    tag: 'Splenda'
+		},
+		{
+		 id: 6,
+		 name: 'Hot chocolate may prevent memory decline',
+		 content: 'How Safe Is Splenda (Sucralose)?',
+		 img: 'care_chocolate.jpg',
+		 author: 'Dr.Catharine Paddock',
+		 copyright: 'Medical News Today',
+		 date: '18/03/2014',
+		 tag: 'Chocolate',
+		 isFeature: true
+		},
+		{
+		   id: 7,
+		   name: 'New science confirms raw milk is remarkably safe',
+		   content: 'How Safe Is Splenda (Sucralose)?',
+		   img: 'care_milk.jpg',
+		   author: 'Ethan A. Huff',
+		   copyright: 'Medical News Today',
+		   date: '02/07/2013'
+		},
+		{
+		  id: 8,
+		  name: 'Eight foods that help fight allergies',
+		  content: 'How Safe Is Splenda (Sucralose)?',
+		  img: 'care_8food.jpg',
+		  author: 'Sandeep Godiyal',
+		  copyright: 'Medical News Today',
+		  date: '02/07/2013',
+		  isFeature: true
+		},
+		{
+		 id: 9,
+		 name: 'Quinoa nutritional benefits',
+		 content: 'How Safe Is Splenda (Sucralose)?',
+		 img: 'care_quinoa.jpg',
+		 author: 'Yanjun',
+		 copyright: 'Medical News Today',
+		 date: '09/08/2013',
+		 tag: 'Quinoa'
+		},
+		{
+		  id: 10,
+		  name: 'Five healthy snacks you can enjoy without guilt',
+		  content: 'How Safe Is Splenda (Sucralose)?',
+		  img: 'care_snack.jpg',
+		  author: 'Sandeep Godiyal',
+		  copyright: 'Medical News Today',
+		  date: '11/07/2013',
+		  tag: 'Snack',
+		  isFeature: true
+		},
+		{
+		   id: 11,
+		   name: 'The nutrition of beef',
+		   content: 'How Safe Is Splenda (Sucralose)?',
+		   img: 'care_beef.jpg',
+		   author: 'Sandeep Godiyal',
+		   copyright: 'Medical News Today',
+		   date: '18/03/2014',
+		   tags: [
+		       {
+		           id: 5,
+		           name: 'beef'
+		       }
+		   ],
+		   isFeature: true
+		}
 
     ];
 

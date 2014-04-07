@@ -3,6 +3,12 @@
 body {
     padding-top: 70px;
     padding-bottom: 70px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 h3 {
 	font-family:"Stencil";
@@ -122,7 +128,7 @@ col-xs-1, col-xs-2, col-xs-3, col-xs-4, col-xs-5, col-xs-6, col-xs-7, col-xs-8, 
 
 input.holo[type='text'] {
     /* You can set width to whatever you like */
-    width: 150px;
+    width: 100px;
     font-family: "Roboto", "Droid Sans", sans-serif;
     font-size: 10px;
     color: #fff;
@@ -132,9 +138,13 @@ input.holo[type='text'] {
     display: block;
     outline: none;
     border: none;
-    background: #000;
-    background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
-    background-size: 1px 6px, 1px 1px, 1px 6px;
+    background: #eee;
+    
+    background-image: url("../img/search.png") ;
+    background-repeat: no-repeat;
+    background-position: right center;
+    /*background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+    background-size: 1px 6px, 1px 1px, 1px 6px;*/
 }
 
     input.holo[type='text']:hover, input.holo[type='text']:focus {
@@ -147,8 +157,9 @@ input.holo[type='text'] {
     margin: 6px;
     height: 108px;
     width: 97px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     text-align: center;
+
 }
 .ingredientList .frame {
     width: 95px;
@@ -186,3 +197,15 @@ input.holo[type='text'] {
     width: 95px;
     height: 70px;   
 }
+
+.item{
+    position:relative;
+    text-align: center;
+}
+    .item .icon{
+        position:absolute; 
+        right:0; 
+        top:-3px; 
+        width:20px;
+        height:20px;
+    }

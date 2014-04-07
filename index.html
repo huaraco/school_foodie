@@ -25,7 +25,10 @@
             <div class="navbar-header" style="float:left; width:100%;">
                 <form class="navbar-form navbar-right" role="search" style="float:right; margin: 0 -15px;">
                     <div class="form-group form-inline inline-group">
-                        <input type="text" class="holo" placeholder="{{searchPlaceholder}}" ng-model="searchKeyWord" style="width:150px; float:left;">
+                        <input type="text" class="holo"
+                               ng-hide="getClass('/ingredient')"
+                               placeholder="{{searchPlaceholder}}"
+                               ng-model="searchKeyWord" style="float:left;">
                         <div class="label label-warning" onclick="showLoading();"
                              style="margin-left: 5px; margin-top:7px; float:left; padding: 5px 10px;"
                              ng-show="getLocation()=='/promotion'">
@@ -35,7 +38,7 @@
 
                 </form>
                 <!--<span class="glyphicon glyphicon-chevron-left" style="float:left;"></span>-->
-                <a class="navbar-brand" back-button><img src="img/logo.jpg" style="margin-top:-15px;margin-left:-10px;"></img> </a>
+                <a class="navbar-brand" ><span back-button ng-show="getLocation()!='/recipe'" class="glyphicon glyphicon-chevron-left" style="top:-3px;"></span><img src="img/logo.jpg" style="margin-top:-15px;"></img> </a>
             </div>
             <div class="">
 
@@ -85,14 +88,14 @@
                         </a>
                     </div>
                 </li>
-                <li>
+         <!--        <li>
                     <div ng-class="{'active':getClass('/ingredient')}">
                         <a href="#/ingredient">
-                            <!-- <i class="glyphicon glyphicon-circle-arrow-left"></i> -->
+                            <i class="glyphicon glyphicon-circle-arrow-left"></i>
                             Ingredient
                         </a>
                     </div>
-                </li>
+                </li> -->
 
             </ul>
             <!--<div class="row" id="bottomNav">

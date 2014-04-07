@@ -12,11 +12,11 @@
                     </div>
         </form>
     </div>-->
-	<div id="loading" style="margin:0 auto;">
+	<!--<div id="loading" style="margin:0 auto;">
 		<div id="geoSpinner"></div>Checking your current location...
-	</div>
+	</div>-->
 	
-    <div ng-repeat="store in stores | filter: searchKeyWord" class="promotionStores" style="display:none;">
+    <div ng-repeat="store in stores | filter: searchKeyWord" class="promotionStores" >
         <div class="col-12">
             <div class="panel panel-default">
                 <div class="row">
@@ -29,7 +29,7 @@
         </div>
     </div>
 	
-	<script>
+	<!--<script>
 	window.setTimeout(function(){$("#loading").hide();$(".promotionStores").show()},3000);
-</script>
+    </script>-->
 </div>

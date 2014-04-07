@@ -1,6 +1,20 @@
-
-<div class="container">
-    <div class="col-xs-12 col-md-6 col-lg-6" ng-repeat="rec in recipes | orderBy:['isHot','name'] | filter: {name: searchKeyWord}">
+<div class="col-xs-12 navbar-inverse navbar-top" style="margin-top:-20px;height:40px; background: rgba(0,0,0,0.7); position:fixed; z-index:9999">
+        <div class="row text-center" style="padding:5px;" >
+            <div class="col-xs-10"><h4 style="color:#fff;">{{selectedCategory.name}}</h4></div>
+            <div class="col-xs-2 dropdown">
+              <button class="dropdown-toggle" style="" >
+                <span class=" glyphicon glyphicon-align-justify"></span>
+              </button>
+              <ul class="dropdown-menu pull-right" >
+                <li ng-repeat="rCat in recipeCategories">
+                  <a ng-click="selectCategory(rCat)">{{rCat.name}}</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+<div class="container" style="padding-top:28px;">
+    <div class="col-xs-12 col-md-6 col-lg-6" ng-repeat="rec in categoryRecipes() | orderBy:['isHot','name'] | filter: {name: searchKeyWord}">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="row">
@@ -33,5 +47,8 @@
         </div>
 
     </div>
+
+
+
 </div>
 

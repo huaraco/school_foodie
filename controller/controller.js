@@ -22,9 +22,28 @@ app.controller('rootController', function ($scope, $location) {
 });
 
 app.controller('recipeController', function ($scope, cooKeyService) {
-    $scope.recipes = cooKeyService.getRecipes();
+    recipes = cooKeyService.getRecipes();
     $scope.$parent.searchPlaceholder = 'Recipe';
+    $scope.recipeCategories = cooKeyService.getRecipeCategories();
+    
+    $scope.selectedCategory = $scope.recipeCategories[0];
+
+    $scope.selectCategory = function(cat){
+        $scope.selectedCategory = cat;
+    }
+
+    $scope.categoryRecipes = function(){
+        if ($scope.selectedCategory == null || $scope.selectedCategory.id == 0)
+            return recipes;
+
+        return _.filter(recipes, function(d){
+            return d.recipeCategory == $scope.selectedCategory.id;
+        });
+    }
+
+
 	spinner.stop();
+
 });
 
 app.controller('recipeDetailController', function ($scope, $routeParams, $sce, cooKeyService) {
@@ -62,6 +81,10 @@ app.controller('diyController', function ($scope, $location, cooKeyService) {
         $scope.$parent.diyIngredients = $scope.$parent.diyIngredients.filter(function (item) {
             return item != ingredient;
         });
+    }
+
+    $scope.isSelected = function(ingredient){
+        return _.contains($scope.$parent.diyIngredients, ingredient);
     }
 
     $scope.checkIngredient = function () {
