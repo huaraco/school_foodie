@@ -96,12 +96,7 @@ app.controller('diyController', function ($scope, $location, $modal, cooKeyServi
     }
 
     $scope.checkIngredient = function () {
-        // if ($scope.search == "Continue") {
-        //     $scope.search == "Go";
-        //     $location.path('/diy/result');
-        // }
-            
-
+        
         var conflicts = cooKeyService.getConflicts();
         var diyIngredientIds = _.map($scope.$parent.diyIngredients, function (item) { return item.id });
         
@@ -114,7 +109,6 @@ app.controller('diyController', function ($scope, $location, $modal, cooKeyServi
             _.each(foundConflicts, function(item) {
                 $scope.alerts.push({ type: 'danger', msg: item.description });
             });
-            // $scope.search = "Continue";
             $scope.open();
         } else {
             $location.path('/diy/result');    
