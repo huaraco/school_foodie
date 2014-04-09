@@ -206,12 +206,13 @@ app.controller('promotionController', function ($scope, $firebase, cooKeyService
 app.controller('promotionListController', function ($scope, $routeParams, cooKeyService, $firebase) {
     init();
     function init() {
+
         var storeId = ($routeParams.storeId) ? parseInt($routeParams.storeId) : 0;
         if (storeId > 0) {
             $scope.promotions = cooKeyService.getStore(storeId);// $firebase(promotionRef);
         }
     }
-
+    $scope.$parent.searchKeyWord = '';
     $scope.$parent.searchPlaceholder = 'ingredient';
 });
 
