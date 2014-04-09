@@ -1531,6 +1531,13 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per 100g",
                     "validtill": "31 Mar 2014",
                     "img": "ikan bilis.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Crab",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "crab.jpg"
                 }
             ],
             "img": "Cold Storage.jpeg"
@@ -1622,6 +1629,13 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per 100g",
                     "validtill": "31 Mar 2014",
                     "img": "ikan bilis.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Crab",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "crab.jpg"
                 }
             ],
             "img": "Giant.jpg"
@@ -1713,6 +1727,13 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per 100g",
                     "validtill": "31 Mar 2014",
                     "img": "ikan bilis.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Crab",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "crab.jpg"
                 }
             ],
             "img": "NTUC FairPrice.png"
@@ -1811,6 +1832,13 @@ app.service('cooKeyService', function ($firebase) {
                     "promotionPrice": "0.59 per 100g",
                     "validtill": "31 Mar 2014",
                     "img": "ikan bilis.jpg"
+                }, {
+                    "origPrice": "0.8 per 100g",
+                    "isHot": false,
+                    "name": "Crab",
+                    "promotionPrice": "0.59 per 100g",
+                    "validtill": "31 Mar 2014",
+                    "img": "crab.jpg"
                 }
             ],
             "img": "Sheng Siong.jpeg"
