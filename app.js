@@ -1,4 +1,4 @@
-var app = angular.module('cooKeyApp', ['ngRoute', 'firebase', 'ngSanitize', 'ui.bootstrap']);
+var app = angular.module('cooKeyApp', ['ngRoute', 'firebase', 'ngSanitize', 'ui.bootstrap','infinite-scroll']);
 
 app.directive('backButton', function () {
     return {
