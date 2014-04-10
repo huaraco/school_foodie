@@ -136,7 +136,7 @@ app.service('cooKeyService', function ($firebase) {
             name: 'Chilli',
             unit: 'g',
             categoryId: 2,
-            img: 'chilli.jpg',
+            img: 'chili.jpg',
             description: 'Chili is spicy'
         },
         {
@@ -144,7 +144,7 @@ app.service('cooKeyService', function ($firebase) {
             name: 'Crab',
             unit: '',
             categoryId: 3,
-            img: 'Crab.jpg',
+            img: 'crab.jpg',
             description: 'Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" '
         },
         {
@@ -332,7 +332,7 @@ app.service('cooKeyService', function ($firebase) {
 		    name: 'Sugar',
 		    unit: '',
 		    categoryId: 4,
-		    img: 'sugar.jpg',
+		    img: 'sugar.JPG',
 		    description: ''
 		}, {
 		    id: 29,
@@ -353,7 +353,7 @@ app.service('cooKeyService', function ($firebase) {
 		    name: 'Balsamic Vinegar',
 		    unit: '',
 		    categoryId: 4,
-		    img: 'balsamicvinegar.jpg',
+		    img: 'balsamicvinegar.JPG',
 		    description: ''
 		}, {
 		    id: 32,
@@ -417,13 +417,6 @@ app.service('cooKeyService', function ($firebase) {
 		    unit: '',
 		    categoryId: 4,
 		    img: 'redfermentedtofu.jpg',
-		    description: ''
-		}, {
-		    id: 41,
-		    name: 'Fice Spice Powder',
-		    unit: '',
-		    categoryId: 4,
-		    img: 'fivespicepowder.gif',
 		    description: ''
 		}, {
 		    id: 42,
@@ -542,14 +535,14 @@ app.service('cooKeyService', function ($firebase) {
 		    name: 'Octopus',
 		    unit: '',
 		    categoryId: 3,
-		    img: 'Octopus.jpg',
+		    img: 'octopus.jpg',
 		    description: ''
 		}, {
 		    id: 59,
 		    name: 'Oyster',
 		    unit: '',
 		    categoryId: 3,
-		    img: 'Oyster.jpg',
+		    img: 'oyster.jpg',
 		    description: ''
 		}, {
 		    id: 60,
